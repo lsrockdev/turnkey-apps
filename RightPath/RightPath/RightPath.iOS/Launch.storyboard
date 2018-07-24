@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2"/>
+                        <viewControllerLayoutGuide type="bottom" id="3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="RPREStart.png" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                        <constraints>
+                            <constraint firstItem="9" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="Hx3-Wv-Gjk"/>
+                            <constraint firstItem="9" firstAttribute="centerY" secondItem="6" secondAttribute="centerY" id="raJ-n2-PDa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-256" y="43"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TEStart.png" width="150" height="150"/>
+        <image name="RPREStart.png" width="150" height="150"/>
+    </resources>
+</document>

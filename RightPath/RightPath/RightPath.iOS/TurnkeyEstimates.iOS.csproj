@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{8380B338-9A6B-4089-89A0-7C958AF9E198}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TurnkeyEstimates.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>TurnkeyEstimatesiOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: Elijah Randall (H25GSZ437E)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: Elijah Randall (H25GSZ437E)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer: Elijah Randall (H25GSZ437E)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <AssemblyName>RightPathiOS</AssemblyName>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Turnkey Estimates LLC (CA4E75S2EA)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>True</BuildIpa>
+    <IpaPackageName>
+    </IpaPackageName>
+    <AssemblyName>RightPathiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Elijah Randall (H25GSZ437E)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IpaPackageName>
+    </IpaPackageName>
+    <AssemblyName>RightPathiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Elijah Randall (H25GSZ437E)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <AssemblyName>RightPathiOS</AssemblyName>
+    <MtouchSdkVersion>11.4</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator'">
+    <CodesignKey>iPhone Developer: Elijah Randall (H25GSZ437E)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignExtraArgs>
+    </CodesignExtraArgs>
+    <OutputPath>bin\Ad-Hoc</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <InterfaceDefinition Include="Launch.storyboard" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RightPath\RightPath.csproj">
+      <Name>RightPath</Name>
+      <Project>{790AA6D1-65C6-411A-92F6-B397322EE1FB}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TEStart.png" />
+    <BundleResource Include="Resources\RPREStart.png" />
+    <BundleResource Include="Resources\RPREStart%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TEStart%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>

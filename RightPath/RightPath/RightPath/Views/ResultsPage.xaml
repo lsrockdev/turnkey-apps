@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RightPath.Views.ResultsPage" BackgroundColor="#f0f0f0">
+  <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Padding="20" Spacing="10">
+    <Label Text="Total - Basic" HorizontalOptions="Center" FontAttributes="Bold"/>
+    <Label x:Name="TotalBasicLabel" HorizontalOptions="Center"/>
+    <Label Text="Total - Upgrade Difference" HorizontalOptions="Center" FontAttributes="Bold"/>
+    <Label x:Name="TotalUpgradeLabel" HorizontalOptions="Center"/>
+    <Label Text="Total - Big Ticket Items" HorizontalOptions="Center" FontAttributes="Bold"/>
+    <Label x:Name="TotalBigLabel" HorizontalOptions="Center"/>
+    <Label Text="Total - Rarities" HorizontalOptions="Center" FontAttributes="Bold"/>
+    <Label x:Name="TotalRaritiesLabel" HorizontalOptions="Center"/>
+    <Button Text="See Additional Details" Clicked="DetailButton_OnClicked"/>
+    <Label Text="Total" HorizontalOptions="Center" FontAttributes="Bold"/>
+    <Label x:Name="TotalLabel" HorizontalOptions="Center"/>
+    <Label Text="Estimated Time of Completion" HorizontalOptions="Center" FontAttributes="Bold"/>
+    <Label x:Name="EstimateLabel" HorizontalOptions="Center"/>
+    <Button Text="Start Over" Clicked="Button_OnClicked"/>
+    <Label Text="*Estimate does not include landscaping, fences, driveways or walkways, pools, yard work, drainage, windows, or architectural plans." FontSize="10"/>
+  </StackLayout>
+</ContentPage>
