@@ -115,8 +115,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
-    <CodesignKey>iPhone Developer: Elijah Randall (H25GSZ437E)</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <AssemblyName>RightPathiOS</AssemblyName>
     <MtouchSdkVersion>11.4</MtouchSdkVersion>
