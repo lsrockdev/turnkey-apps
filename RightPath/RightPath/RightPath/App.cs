@@ -8,8 +8,8 @@ namespace RightPath
         public App()
         {
             // The root page of your application
-            //MainPage = new NavigationPage(new MainPage("Start")) { BarBackgroundColor = Color.FromHex("#FFC107"), BarTextColor = Color.White }; //Turnkey
-			MainPage = new NavigationPage(new MainPage("Start")) { BarBackgroundColor = Color.FromHex("#AFCB40"), BarTextColor = Color.Black }; //Right path
+            MainPage = new NavigationPage(new MainPage("Start")) { BarBackgroundColor = Color.FromHex("#FFC107"), BarTextColor = Color.White }; //Turnkey
+			//MainPage = new NavigationPage(new MainPage("Start")) { BarBackgroundColor = Color.FromHex("#AFCB40"), BarTextColor = Color.Black }; //Right path
         }
 
         protected override void OnStart()

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RightPath.Views.MainPage" BackgroundColor="Silver">
@@ -7,7 +7,7 @@
   </ContentPage.Padding>-->
   <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="50" Padding="20">
     <Image Source="RPREStart.png" HeightRequest="150" WidthRequest="150"/>
-    <Label Text="Welcome to Right Path Real Estate!" HorizontalOptions="Center"/>
+    <Label Text="Welcome to Turnkey Estimates!" HorizontalOptions="Center"/>
     <Button Text="Start a New Estimate" Clicked="Button_OnClicked"/>
 	<Label Text="v1.0" FontSize="8" HorizontalOptions="Center"/>
   </StackLayout>
