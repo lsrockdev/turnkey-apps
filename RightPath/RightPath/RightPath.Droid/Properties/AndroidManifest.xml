@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.turnkeyestimates.turnkey" android:installLocation="internalOnly" android:versionName="1.0" android:versionCode="2">
-	<uses-sdk android:minSdkVersion="21" />
-	<application android:label="RPRE Estimates" android:theme="@style/MyTheme" android:icon="@drawable/icon"></application>
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+	<application android:theme="@style/MyTheme" android:icon="@drawable/icon" android:label="Turnkey Estimates"></application>
 </manifest>
