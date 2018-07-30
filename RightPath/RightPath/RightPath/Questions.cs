@@ -30,7 +30,7 @@ namespace RightPath
                         new AnswerChoice("No"),
                         new AnswerChoice("I don't know")
                     }),
-                new Question(101, "Does the house have a garage?", EstimateCategory.None,
+                new Question(101, "Is there carpet on the upper floor?", EstimateCategory.None,
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("One car"), // Add 200 sqft to house for ROOF, SIDING, and BRICK calcs
@@ -39,7 +39,7 @@ namespace RightPath
                         new AnswerChoice("No garage"),
                         new AnswerChoice("I don't know") // Two cars
                     }),
-                new Question(42, "Does the house have any of these odors: mildew, musty, smoke, pet?",
+                new Question(42, "Does the house have any of these odors: (mildew, musty, smoke, pets)?",
                     EstimateCategory.Basic,
                     new List<AnswerChoice>
                     {
@@ -48,7 +48,7 @@ namespace RightPath
                         new AnswerChoice("I don't know") // No change
                     }),
                 new Question(43,
-                    "Grading how house was treated: Is there visible sheetrock damage in the house (holes, moisture, bad patchwork, cracks, etc. or non-neutral paint or wallpaper)?",
+                             "Grading how house was treated: Is there visible sheetrock damage in the house (holes, moisture, bad patchwork, cracks, paneling etc. or non-neutral paint or wallpaper)?",
                     EstimateCategory.Basic,
                     new List<AnswerChoice>
                     {
