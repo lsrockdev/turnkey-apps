@@ -265,11 +265,11 @@ namespace RightPath.Algorithms
             // 12 - outlets
             if (questions.Q(12).Choices[0].IsSelected)
             {
-                BasicRate += 1/3d;
+                BasicRate += 0.5;
             }
             else if (questions.Q(12).Choices[2].IsSelected)
             {
-                BasicRate += 0.1;
+                BasicRate += 0.25;
             }
 
             // 45 - light fixtures
@@ -280,8 +280,8 @@ namespace RightPath.Algorithms
             }
             else if (questions.Q(45).Choices[2].IsSelected)
             {
-                BasicRate += 1/3d;
-                upgradesRate += 2/3d*(1/3d)*fixturePremium;
+                BasicRate += 0.75;
+                upgradesRate += 2/3d*(0.75)*fixturePremium;
             }
 
             // 13 - countertops
