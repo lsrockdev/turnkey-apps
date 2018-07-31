@@ -40,12 +40,12 @@ namespace RightPath.Views
             var newIndex = currentIndex + 1;
 
             // Check previous answer for Skip count
-            if (newIndex > 0 && !Questions[newIndex - 1].IsTextAnswer &&
-                Questions[newIndex - 1].Choices.All(
-                    choice => choice.Type == AnswerChoiceType.SingleSelection))
-            {
-                newIndex += Questions[newIndex - 1].Choices.First(ans => ans.IsSelected).Skip;
-            }
+            //if (newIndex > 0 && !Questions[newIndex - 1].IsTextAnswer &&
+            //    Questions[newIndex - 1].Choices.All(
+            //        choice => choice.Type == AnswerChoiceType.SingleSelection))
+            //{
+            //    newIndex += Questions[newIndex - 1].Choices.First(ans => ans.IsSelected).Skip;
+            //}
 
             if (newIndex < Questions.QList.Count)
             {
