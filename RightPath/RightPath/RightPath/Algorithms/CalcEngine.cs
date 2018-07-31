@@ -460,15 +460,15 @@ namespace RightPath.Algorithms
                     // 204
                     if (questions.Q(204).Choices[0].IsSelected)
                     {
-                        foundation += 500;
+                        foundation += 1000;
                     }
                     else if (questions.Q(204).Choices[1].IsSelected)
                     {
-                        foundation += 1000;
+                        foundation += 1500;
                     }
                     else
                     {
-                        foundation += 1500;
+                        foundation += 2000;
                     }
                 }
 
