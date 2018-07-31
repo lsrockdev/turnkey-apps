@@ -79,11 +79,14 @@ namespace RightPath
                 new Question(201, "Are you planning on replacing or refinishing the bathroom flooring?", EstimateCategory.Basic,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Yes", AnswerChoiceType.SingleSelection, 1),
-                        new AnswerChoice("No", AnswerChoiceType.SingleSelection, 1),
+                        new AnswerChoice("Yes"),
+                        new AnswerChoice("No"),
                         new AnswerChoice("Some"),
-                        new AnswerChoice("I don't know", AnswerChoiceType.SingleSelection, 1)
+                        new AnswerChoice("I don't know")
                     }),
+                new Question(300, "If some, in how many bathrooms will the flooring be replaced?",
+                    EstimateCategory.Basic, null, true),
+                
                 new Question(202, "Are you planning on replacing or refinishing the utility room flooring?", EstimateCategory.Basic,
                     new List<AnswerChoice>
                     {
