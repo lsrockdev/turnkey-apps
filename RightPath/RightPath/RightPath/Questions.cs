@@ -264,13 +264,24 @@ namespace RightPath
                         new AnswerChoice("3 - 5"),
                         new AnswerChoice("> 5")
                     }),
-                new Question(20, "Are there any slopes that you can feel?", EstimateCategory.BigTicket,
+                new Question(20, "Are there any slopes you can feel or see?", EstimateCategory.BigTicket,
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No"),
                         new AnswerChoice("I don't know")
                     }),
+
+                new Question(500, "If yes, how many?", EstimateCategory.BigTicket,
+                    new List<AnswerChoice>
+                    {
+                        new AnswerChoice("1"),
+                        new AnswerChoice("2"),
+                        new AnswerChoice("3"),
+                        new AnswerChoice("4 or more"),
+                    }),
+
+
                 new Question(21, "Are there any slopes next to the bathroom, kitchen, or utility room?",
                     EstimateCategory.BigTicket,
                     new List<AnswerChoice>
