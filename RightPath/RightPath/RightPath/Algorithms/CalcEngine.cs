@@ -384,7 +384,27 @@ namespace RightPath.Algorithms
             {
                 BasicRate += 1.6;
             }
-            else if (questions.Q(105).Choices[2].IsSelected)
+            else if (questions.Q(105).Choices[2].IsSelected )
+            {
+                appliances += 600;
+                if (questions.Q(43).Choices[0].IsSelected)
+                {
+                    BasicRate += 0.4;
+                }
+                else if (questions.Q(43).Choices[1].IsSelected)
+                {
+                    BasicRate += 0.8;
+                }
+                else if (questions.Q(43).Choices[2].IsSelected)
+                {
+                    BasicRate += 1.2;
+                }
+                else if (questions.Q(43).Choices[3].IsSelected)
+                {
+                    BasicRate += 1.6;
+                }
+            }
+            else if (questions.Q(105).Choices[3].IsSelected)
             {
                 if (questions.Q(43).Choices[0].IsSelected)
                 {
@@ -403,6 +423,7 @@ namespace RightPath.Algorithms
                     BasicRate += 1.6;
                 }
             }
+
 
             // 15 - can be lived in
             //if (questions.Q(15).Choices[1].IsSelected)
