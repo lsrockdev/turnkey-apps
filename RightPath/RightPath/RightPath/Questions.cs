@@ -179,8 +179,10 @@ namespace RightPath
                         new AnswerChoice("Master bathroom", AnswerChoiceType.MultipleSelection),
                         // $500A + $200A*cabinetPremium
                         new AnswerChoice("Other bathrooms", AnswerChoiceType.MultipleSelection),
-                        // $300A each (-1) + $200A*cabinetPremium each (-1)
+                        // $200A + $200A*cabinetPremium
                         new AnswerChoice("Utility room/ wet bar", AnswerChoiceType.MultipleSelection),
+                         // $300A each (-1) + $200A*cabinetPremium each (-1)
+                        new AnswerChoice("Any Other Room", AnswerChoiceType.MultipleSelection),
                         // $200A + $200A*cabinetPremium
                         new AnswerChoice("No, Just painting or keeping as-is")
                     }),

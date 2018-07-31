@@ -317,7 +317,7 @@ namespace RightPath.Algorithms
             // 14 - cabinets
             var cabinets = 0d;
             var cabinetsUpgrade = 0d;
-            if (!questions.Q(14).Choices[4].IsSelected)
+            if (!questions.Q(14).Choices[5].IsSelected)
             {
                 if (questions.Q(14).Choices[0].IsSelected)
                 {
@@ -342,6 +342,11 @@ namespace RightPath.Algorithms
                     cabinets += 200;
                     cabinetsUpgrade += 200*cabinetPremium;
                 }
+                if (questions.Q(14).Choices[4].IsSelected)
+                {
+                    cabinets += 3000;
+                    cabinetsUpgrade += 1000 * cabinetPremium;
+                }
             }
 
             // 103 - appliances
@@ -349,12 +354,12 @@ namespace RightPath.Algorithms
             var appliancesUpgrade = 0d;
             if (questions.Q(103).Choices[0].IsSelected)
             {
-                appliances += 1500;
+                appliances += 2000;
                 appliancesUpgrade += 750*appliancePremium;
             }
             else if (questions.Q(103).Choices[2].IsSelected)
             {
-                appliances += 750;
+                appliances += 1500;
                 appliancesUpgrade += 375*appliancePremium;
             }
 
@@ -362,8 +367,14 @@ namespace RightPath.Algorithms
             if (questions.Q(104).Choices[0].IsSelected)
             {
                 BasicRate += 1;
+
             }
             else if (questions.Q(104).Choices[2].IsSelected)
+            {
+                BasicRate += 0.25;
+                appliances += 600;
+            }
+            else if (questions.Q(104).Choices[3].IsSelected)
             {
                 BasicRate += 0.25;
             }
