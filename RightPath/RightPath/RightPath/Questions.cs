@@ -365,7 +365,6 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No"),
-                        new AnswerChoice("Some repair"),
                         new AnswerChoice("I don't know")
                     }),
                 new Question(31, "Will you be removing or adding walls in the existing structure?",

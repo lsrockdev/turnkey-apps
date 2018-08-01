@@ -615,11 +615,7 @@ namespace RightPath.Algorithms
                 // 30
                 if (questions.Q(30).Choices[0].IsSelected)
                 {
-                    electricalPremium += 1200.0;
-                }
-                else if (questions.Q(30).Choices[2].IsSelected)
-                {
-                    electricalPremium += 500.0;
+                    electricalPremium += 2000.0;
                 }
             }
             
