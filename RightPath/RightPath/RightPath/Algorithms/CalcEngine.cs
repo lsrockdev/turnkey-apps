@@ -550,6 +550,10 @@ namespace RightPath.Algorithms
             {
                 pipes = 1000;
             }
+            else if (questions.Q(22).Choices[3].IsSelected)
+            {
+                pipes = 1500;
+            }
 
             var hvacPremium = 0.0;
             // 23

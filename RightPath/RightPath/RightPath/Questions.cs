@@ -298,6 +298,7 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No"),
+                        new AnswerChoice("Water heater replacement only"), // Add 0.5
                         new AnswerChoice("Fix leaks only"), // Add 0.5
                         new AnswerChoice("I don't know")
                     }),
