@@ -508,18 +508,36 @@ namespace RightPath.Algorithms
                     }
                 }
 
-                // 21
-                if (questions.Q(21).Choices[0].IsSelected)
+                //// 21
+                if (questions.Q(21).Choices[1].IsSelected)
                 {
-                    if (questions.Q(18).Choices[0].IsSelected)
-                    {
-                        foundation += foundationBase*2;
-                    }
-                    else
-                    {
-                        foundation += 1500.0;
-                    }
+                    foundation += 2000;
                 }
+                else if (questions.Q(21).Choices[2].IsSelected)
+                {
+                    foundation += 4000;
+                }
+                else if (questions.Q(21).Choices[3].IsSelected)
+                {
+                    foundation += 6000;
+                }
+                else if (questions.Q(21).Choices[4].IsSelected)
+                {
+                    foundation += 8000;
+                }
+
+                //// 21
+                //if (questions.Q(21).Choices[0].IsSelected)
+                //{
+                //    if (questions.Q(18).Choices[0].IsSelected)
+                //    {
+                //        foundation += foundationBase*2;
+                //    }
+                //    else
+                //    {
+                //        foundation += 1500.0;
+                //    }
+                //}
             }
 
             var pipes = 0d;

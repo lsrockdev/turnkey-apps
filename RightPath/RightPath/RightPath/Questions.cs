@@ -282,13 +282,15 @@ namespace RightPath
                     }),
 
 
-                new Question(21, "Are there any slopes next to the bathroom, kitchen, or utility room?",
+                new Question(21, "How many of those slopes are next to a bathroom, kitchen, or utility room?",
                     EstimateCategory.BigTicket,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Yes"),
-                        new AnswerChoice("No"),
-                        new AnswerChoice("I don't know")
+                        new AnswerChoice("None” (No effect)"),
+                        new AnswerChoice("1"),
+                        new AnswerChoice("2"),
+                        new AnswerChoice("3"),
+                        new AnswerChoice("4")
                     }),
                 new Question(22, "Does the house need to be re-piped (plumbing in attic and walls)?",
                     EstimateCategory.BigTicket,
