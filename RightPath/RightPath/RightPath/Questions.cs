@@ -419,6 +419,7 @@ namespace RightPath
                     {
                         new AnswerChoice("Full replacement"), // 2.6*sqft of house plus garage (q101)A
                         new AnswerChoice("Some shingle repair only", AnswerChoiceType.SingleSelection, 1), // $575A
+                        new AnswerChoice("Chemical roof wash", AnswerChoiceType.SingleSelection, 1),
                         new AnswerChoice("No work needed", AnswerChoiceType.SingleSelection, 1),
                         new AnswerChoice("I don't know", AnswerChoiceType.SingleSelection, 1)
                     }),
@@ -505,7 +506,7 @@ namespace RightPath
                 new Question(114, "How much sheetrock will you be removing or is missing now?", EstimateCategory.None,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("25%"), // Add 2.5
+                        new AnswerChoice("25% or less"), // Add 2.5
                         new AnswerChoice("50%"), // Add 5
                         new AnswerChoice("75%"), // Add 7.5
                         new AnswerChoice("100%"), // Add 10

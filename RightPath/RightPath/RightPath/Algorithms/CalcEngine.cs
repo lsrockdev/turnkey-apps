@@ -775,9 +775,12 @@ namespace RightPath.Algorithms
             }
             else if (questions.Q(34).Choices[1].IsSelected)
             {
-                roof = 575;
+                roof = 1000;
             }
-
+            else if (questions.Q(34).Choices[2].IsSelected)
+            {
+                roof = 800;
+            }
 
             var raritiesRate = 0.0;
             // 35
@@ -927,7 +930,7 @@ namespace RightPath.Algorithms
             }
             else if (questions.Q(302).Choices[3].IsSelected)
             {
-                trash = 2000;
+                trash = 2500;
             }
 
             var basicResult = BasicRate*SquareFeet + countertops + cabinets + surrounds + appliances;
