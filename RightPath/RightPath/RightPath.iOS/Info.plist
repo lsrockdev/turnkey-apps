@@ -17,7 +17,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>9.0</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.turnkeyestimates.turnkey</string>
 	<key>CFBundleVersion</key>
@@ -25,7 +25,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>Launch</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0</string>
+	<string>4.0</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleName</key>
