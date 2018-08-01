@@ -306,8 +306,8 @@ namespace RightPath
                     EstimateCategory.BigTicket,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Yes"),
-                        new AnswerChoice("No", AnswerChoiceType.SingleSelection, 4),
+                        new AnswerChoice("Yes, never had central A/C before"),
+                        new AnswerChoice("No, partial replacement/ductwork only", AnswerChoiceType.SingleSelection, 4),
                         new AnswerChoice("Just needs servicing", AnswerChoiceType.SingleSelection, 4),
                         new AnswerChoice("I don't know")
                     }),
