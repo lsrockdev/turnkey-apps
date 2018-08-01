@@ -609,7 +609,7 @@ namespace RightPath.Algorithms
                 }
                 else if (questions.Q(29).Choices[3].IsSelected)
                 {
-                    electricalPremium += 1.0*SquareFeet;
+                    electricalPremium += 1100;
                 }
 
                 // 30

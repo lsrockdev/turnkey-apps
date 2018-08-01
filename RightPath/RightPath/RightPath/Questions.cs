@@ -307,18 +307,17 @@ namespace RightPath
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("Yes, never had central A/C before"),
-                        new AnswerChoice("No, partial replacement/ductwork only", AnswerChoiceType.SingleSelection, 4),
-                        new AnswerChoice("Just needs servicing", AnswerChoiceType.SingleSelection, 4),
+                        new AnswerChoice("No, partial replacement/ductwork only"),
+                        new AnswerChoice("Just needs servicing"),
                         new AnswerChoice("I don't know")
                     }),
                 new Question(24, "Does the house need a complete system (inside and outside units)?",
                     EstimateCategory.BigTicket,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Yes, just units", AnswerChoiceType.SingleSelection, 3),
-                        new AnswerChoice("Yes, units and ductwork", AnswerChoiceType.SingleSelection, 3),
-                        new AnswerChoice("Yes, house has never had central A/C before", AnswerChoiceType.SingleSelection,
-                            3),
+                        new AnswerChoice("Yes, just units"),
+                        new AnswerChoice("Yes, units and ductwork"),
+                        new AnswerChoice("Yes, house has never had central A/C before"),
                         new AnswerChoice("No, only needs partial repair/replacement/ductwork"),
                         new AnswerChoice("No, does not need any unit replacement"),
                         new AnswerChoice("I don't know")
