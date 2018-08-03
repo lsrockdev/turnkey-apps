@@ -386,41 +386,40 @@ namespace RightPath.Algorithms
             }
             else if (questions.Q(105).Choices[2].IsSelected )
             {
-                appliances += 600;
                 if (questions.Q(43).Choices[0].IsSelected)
                 {
-                    BasicRate += 0.4;
+                    BasicRate += 0.65;
                 }
                 else if (questions.Q(43).Choices[1].IsSelected)
                 {
-                    BasicRate += 0.8;
+                    BasicRate += 1.05;
                 }
                 else if (questions.Q(43).Choices[2].IsSelected)
                 {
-                    BasicRate += 1.2;
+                    BasicRate += 1.45;
                 }
                 else if (questions.Q(43).Choices[3].IsSelected)
                 {
-                    BasicRate += 1.6;
+                    BasicRate += 1.85;
                 }
             }
             else if (questions.Q(105).Choices[3].IsSelected)
             {
                 if (questions.Q(43).Choices[0].IsSelected)
                 {
-                    BasicRate += 0.4;
+                    BasicRate += 0.65;
                 }
                 else if (questions.Q(43).Choices[1].IsSelected)
                 {
-                    BasicRate += 0.8;
+                    BasicRate += 1.05;
                 }
                 else if (questions.Q(43).Choices[2].IsSelected)
                 {
-                    BasicRate += 1.2;
+                    BasicRate += 1.45;
                 }
                 else if (questions.Q(43).Choices[3].IsSelected)
                 {
-                    BasicRate += 1.6;
+                    BasicRate += 1.85;
                 }
             }
 
