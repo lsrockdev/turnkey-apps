@@ -744,14 +744,14 @@ namespace RightPath.Algorithms
                 {
                     roofSqft += 200;
                 }
-                else if (questions.Q(101).Choices[1].IsSelected || questions.Q(101).Choices[4].IsSelected)
-                {
-                    roofSqft += 400;
-                }
-                else if (questions.Q(101).Choices[2].IsSelected)
-                {
-                    roofSqft += 600;
-                }
+                //else if (questions.Q(101).Choices[1].IsSelected || questions.Q(101).Choices[4].IsSelected)
+                //{
+                //    roofSqft += 400;
+                //}
+                //else if (questions.Q(101).Choices[2].IsSelected)
+                //{
+                //    roofSqft += 600;
+                //}
 
                 if (questions.Q(2).Choices[0].IsSelected)
                 {

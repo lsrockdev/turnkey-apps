@@ -18,11 +18,27 @@ namespace RightPath
                 new Question(2, "Is the house:", EstimateCategory.None,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Single story", AnswerChoiceType.SingleSelection, 1),
+                        new AnswerChoice("Single story"),
                         new AnswerChoice("Multiple stories"), // Affects flooring premium - cut flooring premium in half
-                        new AnswerChoice("Don't know", AnswerChoiceType.SingleSelection, 1) // Single story
+                        new AnswerChoice("Don't know") // Single story
                     }),
-                new Question(210, "On the upper stories: Is the flooring mostly carpet or will it be?",
+                //new Question(210, "On the upper stories: Is the flooring mostly carpet or will it be?",
+                    //EstimateCategory.None,
+                    //new List<AnswerChoice>
+                    //{
+                    //    new AnswerChoice("Yes"),
+                    //    new AnswerChoice("No"),
+                    //    new AnswerChoice("I don't know")
+                    //}),
+                new Question(101, "Is there carpet on the upper floor?", EstimateCategory.None,
+                    new List<AnswerChoice>
+                    {
+                        new AnswerChoice("Yes"), // Add 200 sqft to house for ROOF, SIDING, and BRICK calcs
+                        new AnswerChoice("No"), // Add 400 sqft
+                        new AnswerChoice("Hous is single story") // Add 600 sqft
+                    }),
+
+                new Question(210, "Does the house have a garage?",
                     EstimateCategory.None,
                     new List<AnswerChoice>
                     {
@@ -30,15 +46,7 @@ namespace RightPath
                         new AnswerChoice("No"),
                         new AnswerChoice("I don't know")
                     }),
-                new Question(101, "Is there carpet on the upper floor?", EstimateCategory.None,
-                    new List<AnswerChoice>
-                    {
-                        new AnswerChoice("One car"), // Add 200 sqft to house for ROOF, SIDING, and BRICK calcs
-                        new AnswerChoice("Two cars"), // Add 400 sqft
-                        new AnswerChoice("Three cars or more"), // Add 600 sqft
-                        new AnswerChoice("No garage"),
-                        new AnswerChoice("I don't know") // Two cars
-                    }),
+
                 new Question(42, "Does the house have any of these odors: (mildew, musty, smoke, pets)?",
                     EstimateCategory.Basic,
                     new List<AnswerChoice>
@@ -58,6 +66,7 @@ namespace RightPath
                         new AnswerChoice("No damage"),
                         new AnswerChoice("I don't know") // No change
                     }),
+
                 new Question(44, "Grading how house was treated: Are any of these items damaged or missing (select all that apply)?",
                     EstimateCategory.Basic,
                     new List<AnswerChoice>
