@@ -381,7 +381,7 @@ namespace RightPath.Algorithms
             // 105 - int paint
             if (questions.Q(105).Choices[0].IsSelected)
             {
-                BasicRate += 1.6;
+                BasicRate += 1.75;
             }
             else if (questions.Q(105).Choices[2].IsSelected )
             {
