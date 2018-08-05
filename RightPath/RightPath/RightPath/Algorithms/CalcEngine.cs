@@ -366,17 +366,16 @@ namespace RightPath.Algorithms
             // 104 - ext paint
             if (questions.Q(104).Choices[0].IsSelected)
             {
-                BasicRate += 1;
+                BasicRate += 0.75;
 
             }
             else if (questions.Q(104).Choices[2].IsSelected)
             {
-                BasicRate += 0.25;
-                appliances += 600;
+                BasicRate += 0.38;
             }
             else if (questions.Q(104).Choices[3].IsSelected)
             {
-                BasicRate += 0.25;
+                BasicRate += 0.38;
             }
 
             // 105 - int paint

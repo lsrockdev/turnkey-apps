@@ -182,7 +182,7 @@ namespace RightPath
                         // $200A + $200A*countertopPremium
                         new AnswerChoice("No, I'm keeping it as it is")
                     }),
-                new Question(14, "Are you planning on replacing any cabinets (select all that apply)?",
+                new Question(14, "Are you planning on adding or replacing any cabinets (select all that apply)?",
                     EstimateCategory.Basic,
                     new List<AnswerChoice>
                     {
