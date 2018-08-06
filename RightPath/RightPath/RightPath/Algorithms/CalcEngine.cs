@@ -474,19 +474,19 @@ namespace RightPath.Algorithms
                 if (questions.Q(20).Choices[0].IsSelected)
                 {
                     // 204
-                    if (questions.Q(500).Choices[0].IsSelected)
+                    if (questions.Q(500).Choices[1].IsSelected)
                     {
                         foundation += 100;
                     }
-                    else if (questions.Q(500).Choices[1].IsSelected)
+                    else if (questions.Q(500).Choices[2].IsSelected)
                     {
                         foundation += 200;
                     }
-                    else if (questions.Q(500).Choices[2].IsSelected)
+                    else if (questions.Q(500).Choices[3].IsSelected)
                     {
                         foundation += 300;
                     }
-                    else
+                    else if (questions.Q(500).Choices[4].IsSelected)
                     {
                         foundation += 400;
                     }

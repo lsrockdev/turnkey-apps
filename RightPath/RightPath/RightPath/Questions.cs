@@ -284,6 +284,7 @@ namespace RightPath
                 new Question(500, "If yes, how many?", EstimateCategory.BigTicket,
                     new List<AnswerChoice>
                     {
+                        new AnswerChoice("No slopes"),
                         new AnswerChoice("1"),
                         new AnswerChoice("2"),
                         new AnswerChoice("3"),
@@ -315,10 +316,10 @@ namespace RightPath
                     EstimateCategory.BigTicket,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Yes, never had central A/C before"),
-                        new AnswerChoice("No, partial replacement/ductwork only"),
+                        new AnswerChoice("Yes"),
+                        new AnswerChoice("No",AnswerChoiceType.SingleSelection, 4),
                         new AnswerChoice("Just needs servicing"),
-                        new AnswerChoice("I don't know")
+                        new AnswerChoice("I don't know",AnswerChoiceType.SingleSelection, 4)
                     }),
                 new Question(24, "Does the house need a complete system (inside and outside units)?",
                     EstimateCategory.BigTicket,
@@ -326,9 +327,9 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes, just units"),
                         new AnswerChoice("Yes, units and ductwork"),
-                        new AnswerChoice("Yes, house has never had central A/C before"),
-                        new AnswerChoice("No, only needs partial repair/replacement/ductwork"),
-                        new AnswerChoice("No, does not need any unit replacement"),
+                        new AnswerChoice("Yes, never had central A/C before"),
+                        new AnswerChoice("No, needs partial repair/ductwork"),
+                        new AnswerChoice("No, does not need unit replacement"),
                         new AnswerChoice("I don't know")
                     }),
                 new Question(25, "Does the condenser need to be replaced (outside unit)?", EstimateCategory.BigTicket,
