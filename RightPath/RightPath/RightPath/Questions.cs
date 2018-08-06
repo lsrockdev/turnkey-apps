@@ -359,7 +359,7 @@ namespace RightPath
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("Yes"),
-                        new AnswerChoice("No", AnswerChoiceType.SingleSelection, 2),
+                        new AnswerChoice("No"),
                         new AnswerChoice("I don't know")
                     }),
                 new Question(29, "Does the house need re-wiring?", EstimateCategory.None,
@@ -367,7 +367,7 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No"),
-                        new AnswerChoice("Some repair (example: fixing aluminum wiring)"),
+                        new AnswerChoice("Some Repair(i.e aluminum wiring)"),
                         new AnswerChoice("I don't know")
                     }),
                 new Question(30, "Does the house need a new electric box?", EstimateCategory.None,
@@ -474,8 +474,8 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No", AnswerChoiceType.SingleSelection, 3),
-                        new AnswerChoice("Just some repair", AnswerChoiceType.SingleSelection, 2),
-                        new AnswerChoice("I don't know", AnswerChoiceType.SingleSelection, 2)
+                        new AnswerChoice("Just some repair"),
+                        new AnswerChoice("I don't know")
                     }),
                 new Question(38, "How much of the house is covered in brick?", EstimateCategory.None,
                     new List<AnswerChoice>
