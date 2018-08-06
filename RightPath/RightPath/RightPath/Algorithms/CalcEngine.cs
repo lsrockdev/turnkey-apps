@@ -160,9 +160,9 @@ namespace RightPath.Algorithms
             }
             else if (questions.Q(201).Choices[2].IsSelected)
             {
-                var BathroomFloorReplacementCount = questions.Q(300).NumericalValue;
-                BasicRate += 0.2/BathroomFloorReplacementCount;
-                upgradesRate += 1/16d*flooringPremium/BathroomFloorReplacementCount;
+                //var BathroomFloorReplacementCount = questions.Q(300).NumericalValue;
+                //BasicRate += 0.2/BathroomFloorReplacementCount;
+                //upgradesRate += 1/16d*flooringPremium/BathroomFloorReplacementCount;
             }
 
             // 202
