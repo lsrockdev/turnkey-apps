@@ -120,6 +120,11 @@ namespace RightPath.Views
                     var button = new Button { Text = answerChoice.Text, TextColor = Color.FromHex("#727272") };
                     button.Clicked += delegate
                     {
+                        foreach (var otherAnswerChoice in otherChoices)
+                        {
+                            otherAnswerChoice.IsSelected = false;
+                        }
+
                         answerChoice.IsSelected = true;
                         AnsweredAction(QuestionIndex);
                     };
@@ -144,6 +149,9 @@ namespace RightPath.Views
                     var button = new Button { Text = answerChoice.Text, TextColor = Color.FromHex("#727272") };
                     button.Clicked += delegate
                     {
+                        foreach(var otherAnswerChoice in question.Choices){
+                            otherAnswerChoice.IsSelected = false;
+                        }
                         answerChoice.IsSelected = true;
                         AnsweredAction(QuestionIndex);
                     };
