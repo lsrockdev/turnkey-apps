@@ -43,6 +43,7 @@ namespace RightPath.Views
             sb.AppendLine($"HVAC: {_results[4]:C0}");
             sb.AppendLine($"Electrical: {_results[5]:C0}");
             sb.AppendLine($"Plumbing: {_results[6]:C0}");
+            sb.AppendLine($"Flooring Upgrades: {_results[7]:C0}");
 
             DisplayAlert("Estimate Details", sb.ToString(), "Close");
         }
