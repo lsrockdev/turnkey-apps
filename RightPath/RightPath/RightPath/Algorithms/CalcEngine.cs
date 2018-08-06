@@ -22,8 +22,6 @@ namespace RightPath.Algorithms
             var upgradesRate = 0d;
 
             var flooringUpgrades = 0d;
-            var appearanceUpgrades = 0d;
-            var cabinetUpgrades = 0d;
 
 			//10000
 			var marketFactor = MarketFactorService.GetMarketFactor(questions.Q(10000).NumericalValue.ToString());
@@ -961,7 +959,7 @@ namespace RightPath.Algorithms
             var raritiesResult = raritiesRate*SquareFeet + rooms + brickRepair + moves + trash;
             var upgradesResult = upgradesRate*SquareFeet + cabinetsUpgrade + countertopsUpgrade + appliancesUpgrade;
 
-            return new[] { basicResult * marketFactor, upgradesResult * marketFactor, roof * marketFactor, foundation * marketFactor, hvacPremium * marketFactor, electricalPremium * marketFactor, pipes * marketFactor, raritiesResult * marketFactor,flooringUpgrades*marketFactor };
+            return new[] { basicResult * marketFactor, upgradesResult * marketFactor, roof * marketFactor, foundation * marketFactor, hvacPremium * marketFactor, electricalPremium * marketFactor, pipes * marketFactor, raritiesResult * marketFactor,flooringUpgrades*marketFactor,cabinetsUpgrade*marketFactor,appliancesUpgrade*marketFactor };
         }
     }
 }
