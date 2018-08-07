@@ -12,39 +12,32 @@ namespace RightPath
         { // Provide a count of I don't know
             QList = new List<Question>
             {
-				new Question(10000, "What is the zip code of the house?", EstimateCategory.None, null, true),
+                new Question(10000, "What is the zip code of the house?", EstimateCategory.None, null, true),
                 new Question(1, "What is the square footage of the house, excluding the garage?", EstimateCategory.None,
                     null, true),
                 new Question(2, "Is the house:", EstimateCategory.None,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Single story"),
+                        new AnswerChoice("Single story", AnswerChoiceType.SingleSelection, 1),
                         new AnswerChoice("Multiple stories"), // Affects flooring premium - cut flooring premium in half
-                        new AnswerChoice("Don't know") // Single story
+                        new AnswerChoice("Don't know", AnswerChoiceType.SingleSelection, 1) // Single story
                     }),
-                //new Question(210, "On the upper stories: Is the flooring mostly carpet or will it be?",
-                    //EstimateCategory.None,
-                    //new List<AnswerChoice>
-                    //{
-                    //    new AnswerChoice("Yes"),
-                    //    new AnswerChoice("No"),
-                    //    new AnswerChoice("I don't know")
-                    //}),
-                new Question(101, "Is there carpet on the upper floor?", EstimateCategory.None,
-                    new List<AnswerChoice>
-                    {
-                        new AnswerChoice("Yes"), // Add 200 sqft to house for ROOF, SIDING, and BRICK calcs
-                        new AnswerChoice("No"), // Add 400 sqft
-                        new AnswerChoice("House is single story") // Add 600 sqft
-                    }),
-
-                new Question(210, "Does the house have a garage?",
+                new Question(210, "On the upper stories: Is the flooring mostly carpet or will it be?",
                     EstimateCategory.None,
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No"),
                         new AnswerChoice("I don't know")
+                    }),
+                new Question(101, "Does the house have a garage?", EstimateCategory.None,
+                    new List<AnswerChoice>
+                    {
+                        new AnswerChoice("One car"), // Add 200 sqft to house for ROOF, SIDING, and BRICK calcs
+                        new AnswerChoice("Two cars"), // Add 400 sqft
+                        new AnswerChoice("Three cars or more"), // Add 600 sqft
+                        new AnswerChoice("No garage"),
+                        new AnswerChoice("I don't know") // Two cars
                     }),
 
                 new Question(42, "Does the house have any odors: (mildew, musty, smoke, pets, etc.)?",
@@ -134,7 +127,7 @@ namespace RightPath
                         new AnswerChoice("No", AnswerChoiceType.SingleSelection, 1),
                         new AnswerChoice("I don't know", AnswerChoiceType.SingleSelection, 1)
                     }),
-                new Question(200, "If yes, how many of the bathrooms will get a new tub or shower surround?",
+                new Question(200, "If yes, how many tubs, showers or surrounds will be installed?",
                     EstimateCategory.None, null, true),
                 new Question(11, "Are you planning on replacing any of the plumbing fixtures (select all that apply)?",
                     EstimateCategory.Basic,
