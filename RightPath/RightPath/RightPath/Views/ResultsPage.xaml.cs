@@ -43,11 +43,19 @@ namespace RightPath.Views
             sb.AppendLine($"HVAC: {_results[4]:C0}");
             sb.AppendLine($"Electrical: {_results[5]:C0}");
             sb.AppendLine($"Plumbing: {_results[6]:C0}");
-            sb.AppendLine($"Flooring Upgrades: {_results[7]:C0}");
-            sb.AppendLine($"Cabinet Upgrades: {_results[8]:C0}");
-            sb.AppendLine($"Appearance Upgrades: {_results[9]:C0}");
 
             DisplayAlert("Estimate Details", sb.ToString(), "Close");
         }
+
+        private void DetailAddButton_OnClicked(object sender, EventArgs e)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine($"Flooring Upgrades: {_results[8]:C0}");
+            sb.AppendLine($"Cabinet Upgrades: {_results[9]:C0}");
+            sb.AppendLine($"Appearance Upgrades: {_results[10]:C0}");
+
+            DisplayAlert("Additional Details", sb.ToString(), "Close");
+        }
+
     }
 }

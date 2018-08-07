@@ -21,7 +21,7 @@ namespace RightPath.Algorithms
             var BasicRate = 0d;
             var upgradesRate = 0d;
 
-            var flooringUpgrades = 0d;
+            //var flooringUpgrades = 0d;
 
 			//10000
 			var marketFactor = MarketFactorService.GetMarketFactor(questions.Q(10000).NumericalValue.ToString());
@@ -153,7 +153,7 @@ namespace RightPath.Algorithms
                 BasicRate += 0.5;
                 upgradesRate += 1/8d*flooringPremium;
 
-                flooringUpgrades += (0.5 + 1 / 8d * flooringPremium) * SquareFeet;
+                //flooringUpgrades += (0.5 + 1 / 8d * flooringPremium) * SquareFeet;
             }
 
             // 201
@@ -162,7 +162,7 @@ namespace RightPath.Algorithms
                 BasicRate += 0.2;
                 upgradesRate += 1/16d*flooringPremium;
 
-                flooringUpgrades += (0.2 + 1 / 16d * flooringPremium) * SquareFeet;
+                //flooringUpgrades += (0.2 + 1 / 16d * flooringPremium) * SquareFeet;
  
             }
             else if (questions.Q(201).Choices[2].IsSelected)
@@ -170,7 +170,7 @@ namespace RightPath.Algorithms
                 BasicRate += 0.2;
                 upgradesRate += 1 / 16d * flooringPremium;
 
-                flooringUpgrades += (0.2 + 1 / 16d * flooringPremium) * SquareFeet;
+                //flooringUpgrades += (0.2 + 1 / 16d * flooringPremium) * SquareFeet;
                 //var BathroomFloorReplacementCount = questions.Q(300).NumericalValue;
                 //BasicRate += 0.2/BathroomFloorReplacementCount;
                 //upgradesRate += 1/16d*flooringPremium/BathroomFloorReplacementCount;
@@ -182,7 +182,7 @@ namespace RightPath.Algorithms
                 BasicRate += 0.05;
                 upgradesRate += 1/48d*flooringPremium;
 
-                flooringUpgrades += (0.05 + 1 / 48d * flooringPremium) * SquareFeet;
+                //flooringUpgrades += (0.05 + 1 / 48d * flooringPremium) * SquareFeet;
             }
 
             // 8 - living area floor
@@ -200,7 +200,7 @@ namespace RightPath.Algorithms
                     BasicRate += 0.65;
                     upgradesRate += 7/16d*mlPremium;
 
-                    flooringUpgrades += (0.65 + 7 / 16d * flooringPremium) * SquareFeet;
+                    //flooringUpgrades += (0.65 + 7 / 16d * flooringPremium) * SquareFeet;
                 }
 
                 if (questions.Q(8).Choices[1].IsSelected)
@@ -208,7 +208,7 @@ namespace RightPath.Algorithms
                     BasicRate += 0.125;
                     upgradesRate += 1/8d*flooringPremium;
 
-                    flooringUpgrades += (0.125 + 1 / 8d * flooringPremium) * SquareFeet;
+                    //flooringUpgrades += (0.125 + 1 / 8d * flooringPremium) * SquareFeet;
                 }
 
                 if (questions.Q(8).Choices[2].IsSelected)
@@ -216,7 +216,7 @@ namespace RightPath.Algorithms
                     BasicRate += 0.125;
                     upgradesRate += 1/8d*flooringPremium;
 
-                    flooringUpgrades += (0.125 + 1 / 8d * flooringPremium) * SquareFeet;
+                    //flooringUpgrades += (0.125 + 1 / 8d * flooringPremium) * SquareFeet;
                 }
             }
 
@@ -228,7 +228,7 @@ namespace RightPath.Algorithms
                     BasicRate += 0.15;
                     upgradesRate += 1/8d*flooringPremium;
 
-                    flooringUpgrades += (0.15 + 1 / 8d * flooringPremium) * SquareFeet;
+                    //flooringUpgrades += (0.15 + 1 / 8d * flooringPremium) * SquareFeet;
                 }
 
                 if (questions.Q(9).Choices[1].IsSelected)
@@ -243,7 +243,7 @@ namespace RightPath.Algorithms
                     BasicRate += 0.25;
                     upgradesRate += 1/16d*mlPremium;
 
-                    flooringUpgrades += (0.25 + 1 / 16d * flooringPremium) * SquareFeet;
+                    //flooringUpgrades += (0.25 + 1 / 16d * flooringPremium) * SquareFeet;
                 }
             }
 
@@ -255,7 +255,7 @@ namespace RightPath.Algorithms
             if (questions.Q(10).Choices[0].IsSelected)
             {
                 surrounds = questions.Q(200).NumericalValue * 1000;
-                flooringUpgrades += surrounds;
+                //flooringUpgrades += surrounds;
             }
 
             // 11 - plumbing fixtures
@@ -308,35 +308,35 @@ namespace RightPath.Algorithms
                 upgradesRate += 2/3d*(0.75)*fixturePremium;
             }
 
-            // 13 - countertops
-            var countertops = 0d;
-            var countertopsUpgrade = 0d;
-            if (!questions.Q(13).Choices[4].IsSelected)
-            {
-                if (questions.Q(13).Choices[0].IsSelected)
-                {
-                    countertops += 1000;
-                    countertopsUpgrade += 1500*countertopPremium;
-                }
+            //// 13 - countertops
+            //var countertops = 0d;
+            //var countertopsUpgrade = 0d;
+            //if (!questions.Q(13).Choices[4].IsSelected)
+            //{
+            //    if (questions.Q(13).Choices[0].IsSelected)
+            //    {
+            //        countertops += 1000;
+            //        countertopsUpgrade += 1500*countertopPremium;
+            //    }
 
-                if (questions.Q(13).Choices[1].IsSelected)
-                {
-                    countertops += 300;
-                    countertopsUpgrade += 300*countertopPremium;
-                }
+            //    if (questions.Q(13).Choices[1].IsSelected)
+            //    {
+            //        countertops += 300;
+            //        countertopsUpgrade += 300*countertopPremium;
+            //    }
 
-                if (questions.Q(13).Choices[2].IsSelected && numBathrooms > 0)
-                {
-                    countertops += 200*(numBathrooms - 1);
-                    countertopsUpgrade += 200*countertopPremium*(numBathrooms - 1);
-                }
+            //    if (questions.Q(13).Choices[2].IsSelected && numBathrooms > 0)
+            //    {
+            //        countertops += 200*(numBathrooms - 1);
+            //        countertopsUpgrade += 200*countertopPremium*(numBathrooms - 1);
+            //    }
 
-                if (questions.Q(13).Choices[3].IsSelected)
-                {
-                    countertops += 200;
-                    countertopsUpgrade += 200*countertopPremium;
-                }
-            }
+            //    if (questions.Q(13).Choices[3].IsSelected)
+            //    {
+            //        countertops += 200;
+            //        countertopsUpgrade += 200*countertopPremium;
+            //    }
+            //}
 
             // 14 - cabinets
             var cabinets = 0d;
@@ -955,10 +955,10 @@ namespace RightPath.Algorithms
                 trash = 2500;
             }
 
-            var basicResult = BasicRate*SquareFeet + countertops + cabinets + surrounds + appliances;
+            var basicResult = BasicRate*SquareFeet + cabinets + surrounds + appliances;
             var raritiesResult = raritiesRate*SquareFeet + rooms + brickRepair + moves + trash;
-            var upgradesResult = upgradesRate*SquareFeet + cabinetsUpgrade + countertopsUpgrade + appliancesUpgrade;
-
+            var upgradesResult = upgradesRate*SquareFeet + cabinetsUpgrade + appliancesUpgrade;
+            var flooringUpgrades = upgradesRate * SquareFeet;
             return new[] { basicResult * marketFactor, upgradesResult * marketFactor, roof * marketFactor, foundation * marketFactor, hvacPremium * marketFactor, electricalPremium * marketFactor, pipes * marketFactor, raritiesResult * marketFactor,flooringUpgrades*marketFactor,cabinetsUpgrade*marketFactor,appliancesUpgrade*marketFactor };
         }
     }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RightPath.Views.ResultsPage" BackgroundColor="#f0f0f0">
@@ -11,7 +11,9 @@
     <Label x:Name="TotalBigLabel" HorizontalOptions="Center"/>
     <Label Text="Total - Rarities" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalRaritiesLabel" HorizontalOptions="Center"/>
-    <Button Text="See Additional Details" Clicked="DetailButton_OnClicked"/>
+    <Button Text="See Estimate Details" Clicked="DetailButton_OnClicked"/>
+    <Button Text="See Additional Details" Clicked="DetailAddButton_OnClicked"/>
+
     <Label Text="Total" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalLabel" HorizontalOptions="Center"/>
     <Label Text="Estimated Time of Completion" HorizontalOptions="Center" FontAttributes="Bold"/>
