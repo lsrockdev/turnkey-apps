@@ -35,7 +35,7 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes"), // Add 200 sqft to house for ROOF, SIDING, and BRICK calcs
                         new AnswerChoice("No"), // Add 400 sqft
-                        new AnswerChoice("Hous is single story") // Add 600 sqft
+                        new AnswerChoice("House is single story") // Add 600 sqft
                     }),
 
                 new Question(210, "Does the house have a garage?",
@@ -47,7 +47,7 @@ namespace RightPath
                         new AnswerChoice("I don't know")
                     }),
 
-                new Question(42, "Does the house have any of these odors: (mildew, musty, smoke, pets)?",
+                new Question(42, "Does the house have any odors: (mildew, musty, smoke, pets, etc.)?",
                     EstimateCategory.Basic,
                     new List<AnswerChoice>
                     {
