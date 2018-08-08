@@ -318,9 +318,10 @@ namespace RightPath
                     EstimateCategory.BigTicket,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Yes, just units"),
-                        new AnswerChoice("Yes, units and ductwork"),
-                        new AnswerChoice("Yes, never had central A/C before"),
+                        new AnswerChoice("Yes, just units", AnswerChoiceType.SingleSelection, 3),
+                        new AnswerChoice("Yes, units and ductwork", AnswerChoiceType.SingleSelection, 3),
+                        new AnswerChoice("Yes, house has never had central A/C before", AnswerChoiceType.SingleSelection,
+                            3),
                         new AnswerChoice("No, needs partial repair/ductwork"),
                         new AnswerChoice("No, does not need unit replacement"),
                         new AnswerChoice("I don't know")
@@ -485,7 +486,8 @@ namespace RightPath
                         new AnswerChoice("25%"),
                         new AnswerChoice("50%"),
                         new AnswerChoice("75%"),
-                        new AnswerChoice("100%") // Add to 6 multiplier
+                        new AnswerChoice("100%"), // Add to 6 multiplier
+                        new AnswerChoice("No Replacement")
                     }),
                 new Question(112, "How many sides of the house need brick repair?", EstimateCategory.None,
                     new List<AnswerChoice>

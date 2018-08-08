@@ -7,12 +7,12 @@
     <Label x:Name="TotalBasicLabel" HorizontalOptions="Center"/>
     <Label Text="Total - Upgrade Difference" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalUpgradeLabel" HorizontalOptions="Center"/>
+    <Button Text="See Additional Details" Clicked="DetailAddButton_OnClicked"/>
     <Label Text="Total - Big Ticket Items" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalBigLabel" HorizontalOptions="Center"/>
     <Label Text="Total - Rarities" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalRaritiesLabel" HorizontalOptions="Center"/>
     <Button Text="See Estimate Details" Clicked="DetailButton_OnClicked"/>
-    <Button Text="See Additional Details" Clicked="DetailAddButton_OnClicked"/>
 
     <Label Text="Total" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalLabel" HorizontalOptions="Center"/>

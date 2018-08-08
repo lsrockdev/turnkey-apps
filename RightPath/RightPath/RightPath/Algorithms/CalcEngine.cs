@@ -876,20 +876,20 @@ namespace RightPath.Algorithms
                 }
 
                 // 115
-                double repl;
+                double repl = 0;
                 if (questions.Q(115).Choices[0].IsSelected)
                 {
                     repl = 0.25;
                 }
-                else if (questions.Q(115).Choices[0].IsSelected)
+                else if (questions.Q(115).Choices[1].IsSelected)
                 {
                     repl = 0.5;
                 }
-                else if (questions.Q(115).Choices[0].IsSelected)
+                else if (questions.Q(115).Choices[2].IsSelected)
                 {
                     repl = 0.75;
                 }
-                else
+                else if (questions.Q(115).Choices[3].IsSelected)
                 {
                     repl = 1;
                 }
