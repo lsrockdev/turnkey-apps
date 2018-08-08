@@ -9,6 +9,6 @@
     <Image Source="RPREStart.png" HeightRequest="150" WidthRequest="150"/>
     <Label Text="Welcome to Turnkey Estimates!" HorizontalOptions="Center"/>
     <Button Text="Start a New Estimate" Clicked="Button_OnClicked"/>
-	<Label Text="v3.1" FontSize="8" HorizontalOptions="Center"/>
+    <Label Text="v3.2" FontSize="8" HorizontalOptions="Center"/>
   </StackLayout>
 </ContentPage>

@@ -323,7 +323,8 @@ namespace RightPath
                         new AnswerChoice("Yes, house has never had central A/C before", AnswerChoiceType.SingleSelection,
                             3),
                         new AnswerChoice("No, needs partial repair/ductwork"),
-                        new AnswerChoice("No, does not need unit replacement"),
+                        new AnswerChoice("No, does not need unit replacement", AnswerChoiceType.SingleSelection,
+                            3),
                         new AnswerChoice("I don't know")
                     }),
                 new Question(25, "Does the condenser need to be replaced (outside unit)?", EstimateCategory.BigTicket,
