@@ -25,7 +25,7 @@ namespace RightPath.Views
             TotalBigLabel.Text = $"{bigTicketTotal:C0}";
             TotalRaritiesLabel.Text = $"{_results[7]:C0}";           
 
-            var total = _results.Sum();
+            var total = _results[0] + _results[1] + _results[2] + _results[3] + _results[4] + _results[5] + _results[6]+ _results[7];
             TotalLabel.Text = $"{total:C0}";
             EstimateLabel.Text = $"{Math.Ceiling(total / 7500d)} weeks";
         }
