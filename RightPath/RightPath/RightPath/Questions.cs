@@ -311,8 +311,8 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No",AnswerChoiceType.SingleSelection, 4),
-                        new AnswerChoice("Just needs servicing"),
-                        new AnswerChoice("I don't know",AnswerChoiceType.SingleSelection, 4)
+                        new AnswerChoice("Just needs servicing",AnswerChoiceType.SingleSelection, 4),
+                        new AnswerChoice("I don't know")
                     }),
                 new Question(24, "Does the house need a complete system (inside and outside units)?",
                     EstimateCategory.BigTicket,
