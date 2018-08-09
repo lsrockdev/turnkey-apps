@@ -20,6 +20,7 @@ namespace RightPath.Algorithms
         {
             var BasicRate = 0d;
             var upgradesRate = 0d;
+            var fixtureUpgradesRate = 0d;
 
             //var flooringUpgrades = 0d;
 
@@ -264,25 +265,25 @@ namespace RightPath.Algorithms
                 if (questions.Q(11).Choices[0].IsSelected)
                 {
                     BasicRate += 0.125;
-                    upgradesRate += 1/3d*(1/4d)*fixturePremium;
+                    fixtureUpgradesRate += 1/3d*(1/4d)*fixturePremium;
                 }
 
                 if (questions.Q(11).Choices[1].IsSelected)
                 {
                     BasicRate += 0.125;
-                    upgradesRate += 1/3d*(1/4d)*fixturePremium;
+                    fixtureUpgradesRate += 1/3d*(1/4d)*fixturePremium;
                 }
 
                 if (questions.Q(11).Choices[2].IsSelected)
                 {
                     BasicRate += 0.125;
-                    upgradesRate += 1/3d*(1/4d)*fixturePremium;
+                    fixtureUpgradesRate += 1/3d*(1/4d)*fixturePremium;
                 }
 
                 if (questions.Q(11).Choices[3].IsSelected)
                 {
                     BasicRate += 0.125;
-                    upgradesRate += 1/3d*(1/4d)*fixturePremium;
+                    fixtureUpgradesRate += 1/3d*(1/4d)*fixturePremium;
                 }
             }
 
@@ -300,12 +301,12 @@ namespace RightPath.Algorithms
             if (questions.Q(45).Choices[0].IsSelected)
             {
                 BasicRate += 1;
-                upgradesRate += 2/3d*fixturePremium;
+                fixtureUpgradesRate += 2/3d*fixturePremium;
             }
             else if (questions.Q(45).Choices[2].IsSelected)
             {
                 BasicRate += 0.75;
-                upgradesRate += 2/3d*(0.75)*fixturePremium;
+                fixtureUpgradesRate += 2/3d*(0.75)*fixturePremium;
             }
 
             // 13 - countertops
@@ -955,11 +956,12 @@ namespace RightPath.Algorithms
                 trash = 2500;
             }
 
-            var basicResult = BasicRate*SquareFeet + cabinets + surrounds + appliances;
+            var basicResult = BasicRate * SquareFeet + countertops + cabinets + surrounds + appliances;
             var raritiesResult = raritiesRate*SquareFeet + rooms + brickRepair + moves + trash;
-            var upgradesResult = upgradesRate*SquareFeet + cabinetsUpgrade + appliancesUpgrade;
+            var upgradesResult = upgradesRate*SquareFeet +fixtureUpgradesRate*SquareFeet + cabinetsUpgrade + countertopsUpgrade + appliancesUpgrade;
             var flooringUpgrades = upgradesRate * SquareFeet;
-            return new[] { basicResult * marketFactor, upgradesResult * marketFactor, roof * marketFactor, foundation * marketFactor, hvacPremium * marketFactor, electricalPremium * marketFactor, pipes * marketFactor, raritiesResult * marketFactor,flooringUpgrades*marketFactor,cabinetsUpgrade*marketFactor,appliancesUpgrade*marketFactor };
+            var appearanceUpgrades = fixtureUpgradesRate * SquareFeet + countertopsUpgrade + appliancesUpgrade;
+            return new[] { basicResult * marketFactor, upgradesResult * marketFactor, roof * marketFactor, foundation * marketFactor, hvacPremium * marketFactor, electricalPremium * marketFactor, pipes * marketFactor, raritiesResult * marketFactor,flooringUpgrades*marketFactor,cabinetsUpgrade*marketFactor,appearanceUpgrades*marketFactor };
         }
     }
 }
