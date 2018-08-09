@@ -234,7 +234,7 @@ namespace RightPath
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("Yes"),
-                        new AnswerChoice("No", AnswerChoiceType.SingleSelection, 6),
+                        new AnswerChoice("No", AnswerChoiceType.SingleSelection, 7),
                         new AnswerChoice("Maybe")
                     }),
                 new Question(18, "Are there any settlement cracks in the sheetrock?", EstimateCategory.BigTicket,
