@@ -308,35 +308,35 @@ namespace RightPath.Algorithms
                 upgradesRate += 2/3d*(0.75)*fixturePremium;
             }
 
-            //// 13 - countertops
-            //var countertops = 0d;
-            //var countertopsUpgrade = 0d;
-            //if (!questions.Q(13).Choices[4].IsSelected)
-            //{
-            //    if (questions.Q(13).Choices[0].IsSelected)
-            //    {
-            //        countertops += 1000;
-            //        countertopsUpgrade += 1500*countertopPremium;
-            //    }
+            // 13 - countertops
+            var countertops = 0d;
+            var countertopsUpgrade = 0d;
+            if (!questions.Q(13).Choices[4].IsSelected)
+            {
+                if (questions.Q(13).Choices[0].IsSelected)
+                {
+                    countertops += 1000;
+                    countertopsUpgrade += 1500*countertopPremium;
+                }
 
-            //    if (questions.Q(13).Choices[1].IsSelected)
-            //    {
-            //        countertops += 300;
-            //        countertopsUpgrade += 300*countertopPremium;
-            //    }
+                if (questions.Q(13).Choices[1].IsSelected)
+                {
+                    countertops += 300;
+                    countertopsUpgrade += 300*countertopPremium;
+                }
 
-            //    if (questions.Q(13).Choices[2].IsSelected && numBathrooms > 0)
-            //    {
-            //        countertops += 200*(numBathrooms - 1);
-            //        countertopsUpgrade += 200*countertopPremium*(numBathrooms - 1);
-            //    }
+                if (questions.Q(13).Choices[2].IsSelected && numBathrooms > 0)
+                {
+                    countertops += 200*(numBathrooms - 1);
+                    countertopsUpgrade += 200*countertopPremium*(numBathrooms - 1);
+                }
 
-            //    if (questions.Q(13).Choices[3].IsSelected)
-            //    {
-            //        countertops += 200;
-            //        countertopsUpgrade += 200*countertopPremium;
-            //    }
-            //}
+                if (questions.Q(13).Choices[3].IsSelected)
+                {
+                    countertops += 200;
+                    countertopsUpgrade += 200*countertopPremium;
+                }
+            }
 
             // 14 - cabinets
             var cabinets = 0d;
