@@ -354,7 +354,7 @@ namespace RightPath
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("Yes"),
-                        new AnswerChoice("No"),
+                        new AnswerChoice("No", AnswerChoiceType.SingleSelection, 2),
                         new AnswerChoice("I don't know")
                     }),
                 new Question(29, "Does the house need re-wiring?", EstimateCategory.None,
