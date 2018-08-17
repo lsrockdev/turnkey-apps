@@ -3,6 +3,7 @@
     public enum AnswerChoiceType
     {
         SingleSelection,
-        MultipleSelection
+        MultipleSelection,
+        NumberSelection
     }
 }

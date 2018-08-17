@@ -54,6 +54,101 @@ namespace RightPath.Views
             }
 
             if (question.Choices == null) return;
+            var numberSelectionChoices = question.Choices.Where(choice => choice.Type == AnswerChoiceType.NumberSelection).ToArray();
+            if (numberSelectionChoices.Any()){
+                TextNumberEnterButtons = new Button[numberSelectionChoices.Length];
+                var questionLabel = new Label();
+                questionLabel.LineBreakMode = LineBreakMode.WordWrap;
+                questionLabel.Text = question.Text;
+
+                MainStack.Children.Add(questionLabel);
+
+                int index = 0;
+                foreach (var numberSelectionChoice in numberSelectionChoices)
+                {
+                    var label = new Label
+                    {
+                        HorizontalOptions = LayoutOptions.Start,
+                        VerticalOptions = LayoutOptions.Center,
+                        Text = numberSelectionChoice.Text
+                    };
+
+                    var plusButton = new Button
+                    {
+                        HorizontalOptions = LayoutOptions.Start,
+                        VerticalOptions = LayoutOptions.Center,
+                        //Margin = new Thickness(0, 0, 100, 0),
+                        Text = "+",
+                        BorderWidth = 1,
+                        BorderColor = Color.FromHex("#727272"),
+                        HeightRequest = 40,
+                        ClassId = index.ToString()
+                    };
+
+                    plusButton.Clicked += delegate
+                    {
+                        numberSelectionChoice.Value++;
+                        TextNumberEnterButtons[Int32.Parse(plusButton.ClassId)].Text = numberSelectionChoice.Value.ToString();
+                    };
+
+
+                    var minusButton = new Button
+                    {
+                        HorizontalOptions = LayoutOptions.End,
+                        VerticalOptions = LayoutOptions.Center,
+                        Text = "-",
+                        BorderWidth = 1,
+                        BorderColor = Color.FromHex("#727272"),
+                        HeightRequest = 40,
+                        ClassId = index.ToString()
+                    };
+
+                    minusButton.Clicked += delegate
+                    {
+                        numberSelectionChoice.Value--;
+                        if(numberSelectionChoice.Value<0){
+                            numberSelectionChoice.Value = 0;
+                        }
+                        TextNumberEnterButtons[Int32.Parse(minusButton.ClassId)].Text = numberSelectionChoice.Value.ToString();
+                    };
+
+                    var numberButton = new Button
+                    {
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Center,
+                        BorderWidth = 1,
+                        BorderColor = Color.FromHex("#727272"),
+                        //Margin = new Thickness(0, 0, 70, 0),
+                        WidthRequest = 120,
+                        HeightRequest = 40,
+                        TextColor= Color.FromHex("#000000")
+                    };
+
+                    numberButton.Text = numberSelectionChoice.Value.ToString();
+                    TextNumberEnterButtons[index] = numberButton;
+                    var grid = new Grid
+                    {
+                        VerticalOptions = LayoutOptions.End,
+                        HorizontalOptions = LayoutOptions.FillAndExpand,
+                        Padding = new Thickness(0, 6, 8, 6),
+                    };
+                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+
+                    grid.Children.Add(label);
+                    grid.Children.Add(numberButton, 1, 0);
+                    grid.Children.Add(plusButton, 1, 0);
+                    grid.Children.Add(minusButton, 1, 0);
+
+                    MainStack.Children.Add(grid);
+                    index++;
+                }
+
+                var switchButton = new Button { Text = "Enter", Command = new Command(o => AnsweredAction(QuestionIndex)), Margin = new Thickness(0, 0, 0, 10) };
+                MainStack.Children.Add(switchButton);
+
+                return;
+            }
 
             var checkboxChoices = question.Choices.Where(choice => choice.Type == AnswerChoiceType.MultipleSelection).ToArray();
             if (checkboxChoices.Any())
@@ -169,6 +264,8 @@ namespace RightPath.Views
         }
 
         private Button TextEnterButton { get; set; }
+
+        private Button[] TextNumberEnterButtons { get; set; }
 
         public int QuestionIndex { get; set; }
         private Question Question { get; }

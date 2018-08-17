@@ -10,11 +10,14 @@ namespace RightPath.Models
             Text = text;
             Type = type;
             Skip = skipCount;
+            Value = 0;
         }
 
         public string Text { get; private set; }
 
-		bool isSelected;
+        bool isSelected;
+        public int Value {get;set;}
+
 		public bool IsSelected 
 		{ 
 			get
