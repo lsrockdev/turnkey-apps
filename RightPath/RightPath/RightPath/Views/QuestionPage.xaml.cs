@@ -147,6 +147,22 @@ namespace RightPath.Views
                 var switchButton = new Button { Text = "Enter", Command = new Command(o => AnsweredAction(QuestionIndex)), Margin = new Thickness(0, 0, 0, 10) };
                 MainStack.Children.Add(switchButton);
 
+                var otherChoices = question.Choices.Where(choice => choice.Type == AnswerChoiceType.SingleSelection);
+                foreach (var answerChoice in otherChoices)
+                {
+                    var button = new Button { Text = answerChoice.Text, TextColor = Color.FromHex("#727272") };
+                    button.Clicked += delegate
+                    {
+                        foreach (var numberSelectionChoice in numberSelectionChoices)
+                        {
+                            numberSelectionChoice.Value = 0;
+                        }
+                        AnsweredAction(QuestionIndex);
+                    };
+                    MainStack.Children.Add(button);
+                    //    buttonSection.Add(new ViewCell { View = button });
+                }
+
                 return;
             }
 

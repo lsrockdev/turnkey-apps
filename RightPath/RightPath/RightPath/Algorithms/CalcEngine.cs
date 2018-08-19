@@ -737,25 +737,30 @@ namespace RightPath.Algorithms
             var moves = 0d;
             if (!questions.Q(33).Choices[4].IsSelected)
             {
-                if (questions.Q(33).Choices[0].IsSelected)
-                {
-                    moves += 700d;
-                }
+                moves += questions.Q(33).Choices[0].Value*700d;
+                moves += questions.Q(33).Choices[1].Value * 450d;
+                moves += questions.Q(33).Choices[2].Value * 800d;
+                moves += questions.Q(33).Choices[3].Value * 1000d;
 
-                if (questions.Q(33).Choices[1].IsSelected)
-                {
-                    moves += 450d;
-                }
+                //if (questions.Q(33).Choices[0].IsSelected)
+                //{
+                //    moves += 700d;
+                //}
 
-                if (questions.Q(33).Choices[2].IsSelected)
-                {
-                    moves += 800d;
-                }
+                //if (questions.Q(33).Choices[1].IsSelected)
+                //{
+                //    moves += 450d;
+                //}
 
-                if (questions.Q(33).Choices[3].IsSelected)
-                {
-                    moves += 1000d;
-                }
+                //if (questions.Q(33).Choices[2].IsSelected)
+                //{
+                //    moves += 800d;
+                //}
+
+                //if (questions.Q(33).Choices[3].IsSelected)
+                //{
+                //    moves += 1000d;
+                //}
             }
 
             // 34
@@ -957,7 +962,9 @@ namespace RightPath.Algorithms
             }
 
             var basicResult = BasicRate * SquareFeet + countertops + cabinets + surrounds + appliances;
-            var raritiesResult = raritiesRate*SquareFeet + rooms + brickRepair + moves + trash;
+            //var raritiesResult = raritiesRate*SquareFeet + rooms + brickRepair + moves + trash;
+            var raritiesResult = moves/marketFactor;
+
             var upgradesResult = upgradesRate*SquareFeet +fixtureUpgradesRate*SquareFeet + cabinetsUpgrade + countertopsUpgrade + appliancesUpgrade;
             var flooringUpgrades = upgradesRate * SquareFeet;
             var appearanceUpgrades = fixtureUpgradesRate * SquareFeet + countertopsUpgrade + appliancesUpgrade;

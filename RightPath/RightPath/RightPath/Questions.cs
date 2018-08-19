@@ -412,12 +412,12 @@ namespace RightPath
                     EstimateCategory.BigTicket,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("Toilet drain location", AnswerChoiceType.MultipleSelection), // $700A
-                        new AnswerChoice("Sinks", AnswerChoiceType.MultipleSelection), // $450A 
-                        new AnswerChoice("Shower supply lines", AnswerChoiceType.MultipleSelection), // $800
-                        new AnswerChoice("Shower/ tub drain location", AnswerChoiceType.MultipleSelection),
-                        // $1000 - all should be each
-                        new AnswerChoice("No, I'm keeping it as it is")
+                        new AnswerChoice("Toilet drain location", AnswerChoiceType.NumberSelection), // $700A
+                        new AnswerChoice("Sinks", AnswerChoiceType.NumberSelection), // $450A 
+                        new AnswerChoice("Shower supply lines", AnswerChoiceType.NumberSelection), // $800
+                        new AnswerChoice("Shower/ tub drain location", AnswerChoiceType.NumberSelection),
+                            // $1000 - all should be each
+                        new AnswerChoice("No, I'm keeping it as it is",AnswerChoiceType.SingleSelection)
                     }),
                 new Question(34, "Does the roof need any work?", EstimateCategory.Roof,
                     new List<AnswerChoice>
