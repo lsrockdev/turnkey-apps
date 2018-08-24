@@ -569,11 +569,11 @@ namespace RightPath.Algorithms
             {
                 pipes = 3 * SquareFeet;
             }
+            //else if (questions.Q(22).Choices[2].IsSelected)
+            //{
+            //    pipes = 1000;
+            //}
             else if (questions.Q(22).Choices[2].IsSelected)
-            {
-                pipes = 1000;
-            }
-            else if (questions.Q(22).Choices[3].IsSelected)
             {
                 pipes = 1500;
             }

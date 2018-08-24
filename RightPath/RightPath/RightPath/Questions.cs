@@ -119,7 +119,7 @@ namespace RightPath
                         new AnswerChoice("No, I'm keeping it as it is")
                     }),
                 new Question(102, "How many bathrooms does the house have?", EstimateCategory.None, null, true),
-                new Question(10, "Are you planning on replacing any of the bath tub or shower surrounds?",
+                new Question(10, "Are you planning on replacing any of the bath tubs, showers, or surrounds?",
                     EstimateCategory.Basic,
                     new List<AnswerChoice>
                     {
@@ -301,7 +301,6 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No"),
-                        new AnswerChoice("Water heater replacement only"), // Add 0.5
                         new AnswerChoice("Fix leaks only"), // Add 0.5
                         new AnswerChoice("I don't know")
                     }),
@@ -437,7 +436,7 @@ namespace RightPath
                         new AnswerChoice("I don't know")
                     }
                     ),
-                new Question(35, "Does the siding, soffit, or fascia need replacement?", EstimateCategory.None,
+                new Question(35, "Does the siding, soffit, or fascia need repair/replacement?", EstimateCategory.None,
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("Yes"),
