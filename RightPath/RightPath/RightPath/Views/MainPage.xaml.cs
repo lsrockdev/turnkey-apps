@@ -20,13 +20,19 @@ namespace RightPath.Views
 
         private void Button_OnClicked(object sender, EventArgs e)
         {
+            Navigation.PushModalAsync(new LoginPage());
 			object eulaAccepted;
 			var hasKey = Application.Current.Properties.TryGetValue("eulaAccepted", out eulaAccepted);
+            var isLoggedIn = Application.Current.Properties.TryGetValue("isLoggedIn", out eulaAccepted);
 
 			if (!hasKey || !(bool)eulaAccepted)
 			{
 				Navigation.PushModalAsync(new EULAPage());
 			}
+
+            if (!isLoggedIn){
+                Navigation.PushAsync(new LoginPage());
+            }
 
             foreach (var question in Questions.QList)
             {
