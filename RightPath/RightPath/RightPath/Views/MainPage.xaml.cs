@@ -20,7 +20,6 @@ namespace RightPath.Views
 
         private void Button_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new LoginPage());
 			object eulaAccepted;
 			var hasKey = Application.Current.Properties.TryGetValue("eulaAccepted", out eulaAccepted);
             var isLoggedIn = Application.Current.Properties.TryGetValue("isLoggedIn", out eulaAccepted);
@@ -32,13 +31,13 @@ namespace RightPath.Views
 
             if (!isLoggedIn){
                 Navigation.PushAsync(new LoginPage());
+            }else{
+                foreach (var question in Questions.QList)
+                {
+                    question.Reset();
+                }
+                GetNextQuestion(-1);
             }
-
-            foreach (var question in Questions.QList)
-            {
-                question.Reset();
-            }
-            GetNextQuestion(-1);
         }
 
         private void GetNextQuestion(int currentIndex)

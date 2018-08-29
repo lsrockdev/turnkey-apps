@@ -16,6 +16,8 @@ namespace RightPath.Views
             vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
             InitializeComponent();
 
+            NavigationPage.SetHasNavigationBar(this, false);
+
             Email.Completed += (object sender, EventArgs e) =>
             {
                 Password.Focus();
@@ -25,6 +27,11 @@ namespace RightPath.Views
             {
                 vm.SubmitCommand.Execute(null);
             };
+        }
+
+        private void Signup_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new SignupPage());
         }
     }
 }
