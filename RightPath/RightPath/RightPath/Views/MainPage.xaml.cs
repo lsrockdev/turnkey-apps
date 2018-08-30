@@ -14,30 +14,25 @@ namespace RightPath.Views
             NavigationPage.SetHasNavigationBar(this, false);
             Title = title;
             Questions = new Questions();
+
         }
 
         private Questions Questions { get; }
 
         private void Button_OnClicked(object sender, EventArgs e)
         {
-			object eulaAccepted;
-			var hasKey = Application.Current.Properties.TryGetValue("eulaAccepted", out eulaAccepted);
-            var isLoggedIn = Application.Current.Properties.TryGetValue("isLoggedIn", out eulaAccepted);
+			//object eulaAccepted;
+			//var hasKey = Application.Current.Properties.TryGetValue("eulaAccepted", out eulaAccepted);
+            //if (!hasKey || !(bool)eulaAccepted)
+            //{
+            //  Navigation.PushModalAsync(new EULAPage());
+            //}
 
-			if (!hasKey || !(bool)eulaAccepted)
-			{
-				Navigation.PushModalAsync(new EULAPage());
-			}
-
-            if (!isLoggedIn){
-                Navigation.PushAsync(new LoginPage());
-            }else{
-                foreach (var question in Questions.QList)
-                {
-                    question.Reset();
-                }
-                GetNextQuestion(-1);
+            foreach (var question in Questions.QList)
+            {
+                question.Reset();
             }
+            GetNextQuestion(-1);
         }
 
         private void GetNextQuestion(int currentIndex)

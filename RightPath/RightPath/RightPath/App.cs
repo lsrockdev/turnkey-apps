@@ -8,7 +8,18 @@ namespace RightPath
         public App()
         {
             // The root page of your application
-            MainPage = new NavigationPage(new MainPage("Start")) { BarBackgroundColor = Color.FromHex("#FFC107"), BarTextColor = Color.White }; //Turnkey
+            object loggedInObject;
+            var isLoggedIn = Application.Current.Properties.TryGetValue("isLoggedIn", out loggedInObject);
+
+            if (!isLoggedIn)
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new MainPage("Start")) { BarBackgroundColor = Color.FromHex("#FFC107"), BarTextColor = Color.White }; //Turnkey
+            }
+
 			//MainPage = new NavigationPage(new MainPage("Start")) { BarBackgroundColor = Color.FromHex("#AFCB40"), BarTextColor = Color.Black }; //Right path
         }
 

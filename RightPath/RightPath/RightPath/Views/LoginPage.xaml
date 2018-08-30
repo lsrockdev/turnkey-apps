@@ -3,27 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
              x:Class="RightPath.Views.LoginPage" BackgroundColor="Silver">  
     <ContentPage.Content >  
-        <StackLayout Orientation="Vertical"  Padding="30" Spacing="40">  
+        <StackLayout Orientation="Vertical"  Padding="30" Spacing="30">  
             <BoxView HeightRequest="10"/>  
             <Image HorizontalOptions="Center"  HeightRequest="150" Source="RPREStart.png"/>  
             <StackLayout Orientation="Vertical" Spacing="10" >  
                 <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
-                       PlaceholderColor="White" HeightRequest="40"   
+                       PlaceholderColor="Silver" HeightRequest="40"   
                        Keyboard="Email"  
-                       TextColor="White"/>  
-                <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Senha"   
-                       PlaceholderColor="White" HeightRequest="40"   
+                       TextColor="Black"/>  
+                <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                       PlaceholderColor="Silver" HeightRequest="40"   
                        IsPassword="True"  
-                       TextColor="White"/>  
+                       TextColor="Black"/>  
             </StackLayout>  
-            <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"  
+
+            <StackLayout>  
+                <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"  
                 FontAttributes="Bold" FontSize="18" HorizontalOptions="FillAndExpand"  
                 BackgroundColor="#cbaa32" /> 
             
-            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="CenterAndExpand"> 
-                  <Label Text="No account yet?"  VerticalOptions="CenterAndExpand"/>
-                  <Button Text="Sign Up" Clicked="Signup_OnClicked" />
-            </StackLayout>  
+                <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="CenterAndExpand"> 
+                      <Label Text="No account yet?"  VerticalOptions="CenterAndExpand"/>
+                      <Button Text="Sign Up" Clicked="Signup_OnClicked" />
+                </StackLayout>  
+             </StackLayout>  
+
         </StackLayout>  
     </ContentPage.Content>  
 </ContentPage>  
