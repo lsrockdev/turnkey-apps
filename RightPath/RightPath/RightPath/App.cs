@@ -1,16 +1,19 @@
 ﻿using RightPath.Views;
 using Xamarin.Forms;
+using RightPath.Data;
 
 namespace RightPath
 {
     public class App : Application
     {
+        public static UserManager userManager { get; private set; }
+
         public App()
         {
             // The root page of your application
             object loggedInObject;
             var isLoggedIn = Application.Current.Properties.TryGetValue("isLoggedIn", out loggedInObject);
-
+            userManager = new UserManager(new RestService());
             if (!isLoggedIn)
             {
                 MainPage = new NavigationPage(new LoginPage());

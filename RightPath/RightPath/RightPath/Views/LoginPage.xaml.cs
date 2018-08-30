@@ -14,6 +14,8 @@ namespace RightPath.Views
             var vm = new LoginViewModel();
             this.BindingContext = vm;
             vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
+            vm.PushMainPage += () => Navigation.PushAsync(new MainPage("Start"));
+
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);

@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using RightPath.Models;
-using RightPath.Enums;
+﻿using RightPath.Models;
+using RightPath.Models.ResponseModel;
+using System.Threading.Tasks;
 
 namespace RightPath.Data
 {
 	public interface IRestService
 	{
-        Task UserLoginAsync (User user);
+        Task<LoginResponse> UserLoginAsync (User user);
         Task UserSignupAsync(User user);
 	}
 }

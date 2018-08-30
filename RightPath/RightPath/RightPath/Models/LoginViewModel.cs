@@ -1,13 +1,18 @@
 ﻿using System;
 using System.ComponentModel;  
 using System.Windows.Input;  
-using Xamarin.Forms;  
+using Xamarin.Forms;
+using RightPath.Models;
+using RightPath.Models.ResponseModel;
+
 
 namespace RightPath.Models
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
         public Action DisplayInvalidLoginPrompt;
+        public Action PushMainPage;
+
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         private string email;
         public string Email
@@ -29,18 +34,22 @@ namespace RightPath.Models
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
+
         public ICommand SubmitCommand { protected set; get; }
         public LoginViewModel()
         {
             SubmitCommand = new Command(OnSubmit);
         }
-        public void OnSubmit()
+
+        async void OnSubmit()
         {
-            
-            //if (email != "macoratti@yahoo.com" || password != "secret")
-            //{
-            //    DisplayInvalidLoginPrompt();
-            //}
+            User user = new User(email, password);
+			LoginResponse loginResponse = await App.userManager.LoginTaskAsync(user);
+            if(loginResponse.success == true){
+                PushMainPage();              
+            }else{
+                DisplayInvalidLoginPrompt();
+            }
         }
     }
 }
