@@ -36,10 +36,11 @@ namespace RightPath.Models
         }
         public void OnSubmit()
         {
-            if (email != "macoratti@yahoo.com" || password != "secret")
-            {
-                DisplayInvalidLoginPrompt();
-            }
+            
+            //if (email != "macoratti@yahoo.com" || password != "secret")
+            //{
+            //    DisplayInvalidLoginPrompt();
+            //}
         }
     }
 }
