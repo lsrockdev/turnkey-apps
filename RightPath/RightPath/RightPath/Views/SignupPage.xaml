@@ -28,9 +28,9 @@
                 FontAttributes="Bold" FontSize="18" HorizontalOptions="FillAndExpand"  
                 BackgroundColor="#cbaa32" /> 
             
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"> 
+                <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="CenterAndExpand"> 
                       <Label Text="Already have an account?"  VerticalOptions="CenterAndExpand"/>
-                      <Button Text="Log in" Clicked="Login_OnClicked"/>
+                      <Button Text="Log In" Clicked="Login_OnClicked"/>
                  </StackLayout>  
 
             </StackLayout>  

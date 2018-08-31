@@ -67,7 +67,6 @@
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Views\SignupPage.xaml.cs">
       <DependentUpon>SignupPage.xaml</DependentUpon>
     </Compile>
@@ -77,6 +76,8 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Data\UserManager.cs" />
     <Compile Include="Models\ResponseModel\LoginResponse.cs" />
+    <Compile Include="Models\ViewModel\SignupViewModel.cs" />
+    <Compile Include="Models\ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -146,6 +147,7 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Models\ResponseModel\" />
+    <Folder Include="Models\ViewModel\" />
   </ItemGroup>
   <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
 </Project>

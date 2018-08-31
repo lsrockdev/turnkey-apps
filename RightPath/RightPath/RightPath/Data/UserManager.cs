@@ -17,5 +17,11 @@ namespace RightPath.Data
         {
             return restService.UserLoginAsync(user);
         }
+
+        public Task<LoginResponse> SignupTaskAsync(User user)
+        {
+            return restService.UserSignupAsync(user);
+        }
+
     }
 }

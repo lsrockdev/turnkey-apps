@@ -3,6 +3,6 @@
 	public static class Constants
 	{
 		// URL of REST service
-        public static string RestUrl = "http://localhost/RestApi/";
+        public static string RestUrl = "http://046f881f.ngrok.io/RestApi/";
 	}
 }

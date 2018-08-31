@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Xamarin.Forms;  
 using Xamarin.Forms.Xaml;  
-using RightPath.Models;  
+using RightPath.Models.ViewModel;  
 
 namespace RightPath.Views
 {
@@ -15,6 +15,7 @@ namespace RightPath.Views
             this.BindingContext = vm;
             vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
             vm.PushMainPage += () => Navigation.PushAsync(new MainPage("Start"));
+            vm.PushEulaPage += () => Navigation.PushAsync(new EULAPage());
 
             InitializeComponent();
 
@@ -33,7 +34,7 @@ namespace RightPath.Views
 
         private void Signup_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new SignupPage());
+            Navigation.PushAsync(new SignupPage());
         }
     }
 }

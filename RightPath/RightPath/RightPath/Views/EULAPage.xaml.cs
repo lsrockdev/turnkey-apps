@@ -8,6 +8,7 @@ namespace RightPath.Views
 		public EULAPage()
 		{
 			InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
 			var htmlSource = new HtmlWebViewSource();
 			htmlSource.Html = @"<p>MOBILE APP END USER LICENSE AGREEMENT</p>
@@ -104,8 +105,7 @@ namespace RightPath.Views
 		private async void Accept_OnClicked(object sender, EventArgs e)
 		{
 			Application.Current.Properties["eulaAccepted"] = true;
-
-			await Navigation.PopModalAsync();
+            await Navigation.PushAsync(new MainPage("Start"));
 		}
 	}
 }

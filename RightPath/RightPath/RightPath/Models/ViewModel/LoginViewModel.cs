@@ -1,17 +1,18 @@
 ﻿using System;
-using System.ComponentModel;  
-using System.Windows.Input;  
+using System.ComponentModel;
+using System.Windows.Input;
 using Xamarin.Forms;
 using RightPath.Models;
 using RightPath.Models.ResponseModel;
 
 
-namespace RightPath.Models
+namespace RightPath.Models.ViewModel
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
         public Action DisplayInvalidLoginPrompt;
         public Action PushMainPage;
+        public Action PushEulaPage;
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         private string email;
@@ -44,10 +45,22 @@ namespace RightPath.Models
         async void OnSubmit()
         {
             User user = new User(email, password);
-			LoginResponse loginResponse = await App.userManager.LoginTaskAsync(user);
-            if(loginResponse.success == true){
-                PushMainPage();              
-            }else{
+            LoginResponse loginResponse = await App.userManager.LoginTaskAsync(user);
+            if (loginResponse.success == true)
+            {
+                Application.Current.Properties["isLoggedIn"] = true;
+
+                object eulaAccepted;
+                var hasKey = Application.Current.Properties.TryGetValue("eulaAccepted", out eulaAccepted);
+                if (!hasKey || !(bool)eulaAccepted)
+                {
+                    PushEulaPage();                    
+                }else{
+                    PushMainPage();
+                }
+            }
+            else
+            {
                 DisplayInvalidLoginPrompt();
             }
         }

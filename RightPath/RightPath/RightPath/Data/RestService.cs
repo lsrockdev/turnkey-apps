@@ -47,9 +47,29 @@ namespace RightPath.Data
             }
 		}
 
-        public async Task UserSignupAsync (User user)
+        public async Task<LoginResponse> UserSignupAsync (User user)
 		{
-            
+            try
+            {
+                var uri = new Uri(string.Format(Constants.RestUrl + "signup", ""));
+                var json = JsonConvert.SerializeObject(user);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = null;
+                response = await client.PostAsync(uri, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultJson = await response.Content.ReadAsStringAsync();
+                    var loginResponse = JsonConvert.DeserializeObject<LoginResponse>(resultJson);
+                    return loginResponse;
+                }
+                return new LoginResponse("Unknown Error");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"ERROR {0}", ex.Message);
+                return new LoginResponse(ex.Message);
+            }
+
 		}
 	}
 }
