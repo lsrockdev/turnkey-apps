@@ -468,7 +468,7 @@ namespace RightPath
                     {
                         new AnswerChoice("Yes"),
                         new AnswerChoice("No", AnswerChoiceType.SingleSelection, 3),
-                        new AnswerChoice("Just some repair"),
+                        new AnswerChoice("Just some repair",AnswerChoiceType.SingleSelection, 2),
                         new AnswerChoice("I don't know")
                     }),
                 new Question(38, "How much of the house is covered in brick?", EstimateCategory.None,
@@ -483,11 +483,11 @@ namespace RightPath
                 new Question(115, "Regarding that amount of brick, how much needs replaced?", EstimateCategory.None,
                     new List<AnswerChoice>
                     {
-                        new AnswerChoice("25%"),
-                        new AnswerChoice("50%"),
-                        new AnswerChoice("75%"),
-                        new AnswerChoice("100%"), // Add to 6 multiplier
-                        new AnswerChoice("No Replacement")
+                        new AnswerChoice("25%",AnswerChoiceType.SingleSelection, 1),
+                        new AnswerChoice("50%",AnswerChoiceType.SingleSelection, 1),
+                        new AnswerChoice("75%",AnswerChoiceType.SingleSelection, 1),
+                        new AnswerChoice("100%",AnswerChoiceType.SingleSelection, 1), // Add to 6 multiplier
+                        new AnswerChoice("No Replacement",AnswerChoiceType.SingleSelection, 1)
                     }),
                 new Question(112, "How many sides of the house need brick repair?", EstimateCategory.None,
                     new List<AnswerChoice>
