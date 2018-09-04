@@ -46,6 +46,7 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer: Elijah Randall (H25GSZ437E)</CodesignKey>
     <CodesignProvision>VS: com.turnkeyestimates.turnkey Development</CodesignProvision>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -75,6 +76,7 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <AssemblyName>RightPathiOS</AssemblyName>
     <CodesignProvision>VS: com.turnkeyestimates.turnkey Development</CodesignProvision>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -163,6 +165,10 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WinHttpHandler" />
+    <Reference Include="System.Json" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\TEStart.png" />
@@ -204,4 +210,14 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\netstandard1.0\Xamarin.Forms.targets')" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="None" ResourceNamePolicy="FileName" />
+          <TextStylePolicy inheritsSet="null" scope="text/x-web" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
 </Project>

@@ -21,7 +21,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.turnkeyestimates.turnkey</string>
 	<key>CFBundleVersion</key>
-	<string>5.0</string>
+	<string>6.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch</string>
 	<key>CFBundleShortVersionString</key>
@@ -30,5 +30,10 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleName</key>
 	<string>Turnkey Estimates</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

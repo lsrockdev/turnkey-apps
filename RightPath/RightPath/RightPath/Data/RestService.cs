@@ -10,7 +10,6 @@ using RightPath.Models;
 using RightPath.Models.ResponseModel;
 using RightPath.Data;
 
-
 namespace RightPath.Data
 {
 	public class RestService : IRestService
@@ -19,8 +18,13 @@ namespace RightPath.Data
 
 		public RestService ()
 		{
-			client = new HttpClient ();
-			client.MaxResponseContentBufferSize = 256000;
+            
+            client = new HttpClient(new HttpClientHandler
+            {
+            });
+            client.MaxResponseContentBufferSize = 256000;
+            client.Timeout = TimeSpan.FromSeconds(30);
+
 		}
 
         public async Task<LoginResponse> UserLoginAsync (User user)
@@ -28,10 +32,12 @@ namespace RightPath.Data
             try
             {
                 var uri = new Uri(string.Format(Constants.RestUrl + "login", ""));
+
                 var json = JsonConvert.SerializeObject(user);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = null;
                 response = await client.PostAsync(uri, content);
+
                 if (response.IsSuccessStatusCode)
                 {
                     var resultJson = await response.Content.ReadAsStringAsync();
