@@ -10,15 +10,18 @@
     <Button Text="See Additional Details" Clicked="DetailAddButton_OnClicked"/>
     <Label Text="Total - Big Ticket Items" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalBigLabel" HorizontalOptions="Center"/>
+    <Button Text="See Additional Details" Clicked="DetailButton_OnClicked"/>
+
     <Label Text="Total - Rarities" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalRaritiesLabel" HorizontalOptions="Center"/>
-    <Button Text="See Estimate Details" Clicked="DetailButton_OnClicked"/>
+    
+    <Button Text="See Additional Details" Clicked="DetailRaritiesButton_OnClicked"/>
 
     <Label Text="Total" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="TotalLabel" HorizontalOptions="Center"/>
     <Label Text="Estimated Time of Completion" HorizontalOptions="Center" FontAttributes="Bold"/>
     <Label x:Name="EstimateLabel" HorizontalOptions="Center"/>
     <Button Text="Start Over" Clicked="Button_OnClicked"/>
-    <Label Text="*Estimate does not include landscaping, fences, driveways or walkways, pools, yard work, drainage, windows, or architectural plans." FontSize="10"/>
+    <Label Text="*Estimate does not include fences, driveways or walkways, pools, drainage, architectural plans, permits."  FontSize="10"/>
   </StackLayout>
 </ContentPage>

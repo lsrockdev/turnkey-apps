@@ -57,5 +57,19 @@ namespace RightPath.Views
             DisplayAlert("Additional Details", sb.ToString(), "Close");
         }
 
+        private void DetailRaritiesButton_OnClicked(object sender, EventArgs e)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine($"Framing: {_results[8]:C0}");
+            sb.AppendLine($"Sheetrock/Insulation: {_results[9]:C0}");
+            sb.AppendLine($"Exterior Trim: {_results[10]:C0}");
+            sb.AppendLine($"Brick Work: {_results[10]:C0}");
+            sb.AppendLine($"Landscaping: {_results[10]:C0}");
+            sb.AppendLine($"Windows: {_results[10]:C0}");
+
+            DisplayAlert("Additional Details", sb.ToString(), "Close");
+        }
+
+
     }
 }
