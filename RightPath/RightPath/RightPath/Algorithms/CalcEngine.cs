@@ -961,6 +961,29 @@ namespace RightPath.Algorithms
                 trash = 2500;
             }
 
+            if (!questions.Q(1001).Choices[2].IsSelected)
+            {
+                moves += questions.Q(1001).Choices[0].Value * 450d;
+                moves += questions.Q(1001).Choices[1].Value * 200d;
+            }
+
+            if (questions.Q(1002).Choices[0].IsSelected)
+            {
+                moves += 200d;
+            }
+            else if (questions.Q(1002).Choices[1].IsSelected)
+            {
+                moves += 800d;
+            }
+            else if (questions.Q(1002).Choices[2].IsSelected)
+            {
+                moves += 2000d;
+            }
+            else if (questions.Q(1002).Choices[3].IsSelected)
+            {
+                moves += 4000d;
+            }
+
             var basicResult = BasicRate * SquareFeet + countertops + cabinets + surrounds + appliances;
             //var raritiesResult = raritiesRate*SquareFeet + rooms + brickRepair + moves + trash;
             var raritiesResult = moves/marketFactor;

@@ -526,7 +526,28 @@ namespace RightPath
                         new AnswerChoice("Hoarder house"),
                         new AnswerChoice("Little to none"),
                         new AnswerChoice("I don't know")
+                    }),
+
+                new Question(1001, "Are you planning on having any landscaping work done (i.e. maintenance, clearing, tree trimming)?", EstimateCategory.None,
+                    new List<AnswerChoice>
+                    {
+                        new AnswerChoice("Replacing",AnswerChoiceType.NumberSelection),
+                        new AnswerChoice("Repairing (i.e. glass)",AnswerChoiceType.NumberSelection),
+                        new AnswerChoice("No, I’m keeping it as is",AnswerChoiceType.SingleSelection),
+                    }),
+
+
+                new Question(1002, "Are you having to repair or replace any windows and how many?", EstimateCategory.None,
+                    new List<AnswerChoice>
+                    {
+                        new AnswerChoice("Small amount (basic maintenance of overgrown yard)"),
+                        new AnswerChoice("Medium amount (maintenance and minor manicuring)"),
+                        new AnswerChoice("Large amount (more significant manicuring)"),
+                        new AnswerChoice("1-2 acres (maintenance and minor manicuring on 1-2 acres)"),
+                        new AnswerChoice("No, I’m keeping it as is"),
+                        new AnswerChoice("I don’t know")
                     })
+
             };
 
             foreach (var question in QList)
