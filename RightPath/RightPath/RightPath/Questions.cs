@@ -424,6 +424,7 @@ namespace RightPath
                         new AnswerChoice("Full replacement",AnswerChoiceType.MultipleSelection), // 2.6*sqft of house plus garage (q101)A
                         new AnswerChoice("Some shingle repair only", AnswerChoiceType.MultipleSelection, 1), // $575A
                         new AnswerChoice("Chemical roof wash", AnswerChoiceType.MultipleSelection, 1),
+                        new AnswerChoice("Shingle repair and chemical roof wash", AnswerChoiceType.MultipleSelection, 1),
                         new AnswerChoice("No work needed", AnswerChoiceType.SingleSelection, 1),
                         new AnswerChoice("I don't know", AnswerChoiceType.SingleSelection, 1)
                     }),

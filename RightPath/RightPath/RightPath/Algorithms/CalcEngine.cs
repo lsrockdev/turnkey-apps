@@ -810,6 +810,12 @@ namespace RightPath.Algorithms
                 roof = 800;
             }
 
+            else if (questions.Q(34).Choices[3].IsSelected)
+            {
+                roof = 1800;
+            }
+
+
             var raritiesRate = 0.0;
             // 35
             if (questions.Q(35).Choices[0].IsSelected)
