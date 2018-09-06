@@ -79,7 +79,10 @@ namespace RightPath.Views
                         VerticalOptions = LayoutOptions.Center,
                         //Margin = new Thickness(0, 0, 100, 0),
                         Text = "+",
-                        BorderWidth = 1,
+                        FontSize = 25,
+                        TextColor = Color.FromHex("#727272"),
+
+                        BorderWidth = 0,
                         BorderColor = Color.FromHex("#727272"),
                         HeightRequest = 40,
                         ClassId = index.ToString()
@@ -97,7 +100,10 @@ namespace RightPath.Views
                         HorizontalOptions = LayoutOptions.End,
                         VerticalOptions = LayoutOptions.Center,
                         Text = "-",
-                        BorderWidth = 1,
+                        FontSize = 25,
+                        TextColor = Color.FromHex("#727272"),
+
+                        BorderWidth = 0,
                         BorderColor = Color.FromHex("#727272"),
                         HeightRequest = 40,
                         ClassId = index.ToString()
@@ -116,7 +122,7 @@ namespace RightPath.Views
                     {
                         HorizontalOptions = LayoutOptions.Center,
                         VerticalOptions = LayoutOptions.Center,
-                        BorderWidth = 1,
+                        BorderWidth = 0,
                         BorderColor = Color.FromHex("#727272"),
                         //Margin = new Thickness(0, 0, 70, 0),
                         WidthRequest = 120,
