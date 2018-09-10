@@ -60,12 +60,12 @@ namespace RightPath.Views
         private void DetailRaritiesButton_OnClicked(object sender, EventArgs e)
         {
             var sb = new StringBuilder();
-            sb.AppendLine($"Framing: {_results[8]:C0}");
-            sb.AppendLine($"Sheetrock/Insulation: {_results[9]:C0}");
-            sb.AppendLine($"Exterior Trim: {_results[10]:C0}");
-            sb.AppendLine($"Brick Work: {_results[10]:C0}");
-            sb.AppendLine($"Landscaping: {_results[10]:C0}");
-            sb.AppendLine($"Windows: {_results[10]:C0}");
+            sb.AppendLine($"Framing: {_results[11]:C0}");
+            sb.AppendLine($"Sheetrock/Insulation: {_results[12]:C0}");
+            sb.AppendLine($"Exterior Trim: {_results[13]:C0}");
+            sb.AppendLine($"Brick Work: {_results[14]:C0}");
+            sb.AppendLine($"Landscaping: {_results[15]:C0}");
+            sb.AppendLine($"Windows: {_results[16]:C0}");
 
             DisplayAlert("Additional Details", sb.ToString(), "Close");
         }

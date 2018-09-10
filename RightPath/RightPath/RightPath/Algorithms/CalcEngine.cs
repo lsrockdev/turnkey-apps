@@ -817,6 +817,7 @@ namespace RightPath.Algorithms
 
 
             var raritiesRate = 0.0;
+            var exteriorTrim = 0.0;
             // 35
             if (questions.Q(35).Choices[0].IsSelected)
             {
@@ -863,8 +864,10 @@ namespace RightPath.Algorithms
                 }
 
                 raritiesRate += 6*coverage*repl;
+                exteriorTrim = 6 * coverage * repl * SquareFeet;
             }
 
+            var brickWork = 0.0;
             // 37
             if (questions.Q(37).Choices[0].IsSelected)
             {
@@ -907,6 +910,7 @@ namespace RightPath.Algorithms
                 }
 
                 raritiesRate += 9 * coverage * repl;
+                brickWork = 9 * coverage * repl * SquareFeet;
             }
 
             // 112
@@ -927,44 +931,52 @@ namespace RightPath.Algorithms
             {
                 brickRepair += 2000;
             }
-
+            brickWork += brickRepair;
             // 113 - flow
 
+            var sheetTrock = 0.0;
             // 114
             if (questions.Q(114).Choices[0].IsSelected)
             {
                 raritiesRate += 2.5;
+                sheetTrock = 2.5 * SquareFeet;
             }
             else if (questions.Q(114).Choices[1].IsSelected|| questions.Q(114).Choices[4].IsSelected)
             {
                 raritiesRate += 5;
+                sheetTrock = 5 * SquareFeet;
+
             }
             else if (questions.Q(114).Choices[2].IsSelected)
             {
                 raritiesRate += 7.5;
+                sheetTrock = 7.5 * SquareFeet;
+
             }
             else if (questions.Q(114).Choices[3].IsSelected)
             {
                 raritiesRate += 10;
+                sheetTrock = 10 * SquareFeet;
+
             }
 
             // 302
-            var trash = 0d;
+            var windows = 0d;
             if (questions.Q(302).Choices[0].IsSelected)
             {
-                trash = 400;
+                windows = 400;
             }
             else if (questions.Q(302).Choices[1].IsSelected)
             {
-                trash = 600;
+                windows = 600;
             }
             else if (questions.Q(302).Choices[2].IsSelected)
             {
-                trash = 1200;
+                windows = 1200;
             }
             else if (questions.Q(302).Choices[3].IsSelected)
             {
-                trash = 2500;
+                windows = 2500;
             }
 
             if (!questions.Q(1001).Choices[2].IsSelected)
@@ -973,31 +985,38 @@ namespace RightPath.Algorithms
                 moves += questions.Q(1001).Choices[1].Value * 200d;
             }
 
+
+            var landscaping = 0.0;
+
             if (questions.Q(1002).Choices[0].IsSelected)
             {
-                moves += 200d;
+                landscaping += 200d;
             }
             else if (questions.Q(1002).Choices[1].IsSelected)
             {
-                moves += 800d;
+                landscaping += 800d;
             }
             else if (questions.Q(1002).Choices[2].IsSelected)
             {
-                moves += 2000d;
+                landscaping += 2000d;
             }
             else if (questions.Q(1002).Choices[3].IsSelected)
             {
-                moves += 4000d;
+                landscaping += 4000d;
             }
 
             var basicResult = BasicRate * SquareFeet + countertops + cabinets + surrounds + appliances;
             //var raritiesResult = raritiesRate*SquareFeet + rooms + brickRepair + moves + trash;
-            var raritiesResult = moves/marketFactor;
+            var raritiesResult = rooms + sheetTrock + exteriorTrim + brickWork + landscaping + windows;
+
+            //var raritiesResult = moves/marketFactor;
 
             var upgradesResult = upgradesRate*SquareFeet +fixtureUpgradesRate*SquareFeet + cabinetsUpgrade + countertopsUpgrade + appliancesUpgrade;
             var flooringUpgrades = upgradesRate * SquareFeet;
             var appearanceUpgrades = fixtureUpgradesRate * SquareFeet + countertopsUpgrade + appliancesUpgrade;
-            return new[] { basicResult * marketFactor, upgradesResult * marketFactor, roof * marketFactor, foundation * marketFactor, hvacPremium * marketFactor, electricalPremium * marketFactor, pipes * marketFactor, raritiesResult * marketFactor,flooringUpgrades*marketFactor,cabinetsUpgrade*marketFactor,appearanceUpgrades*marketFactor };
+            return new[] { basicResult * marketFactor, upgradesResult * marketFactor, roof * marketFactor, foundation * marketFactor, hvacPremium * marketFactor, electricalPremium * marketFactor, pipes * marketFactor
+                , raritiesResult * marketFactor,flooringUpgrades*marketFactor,cabinetsUpgrade*marketFactor,appearanceUpgrades*marketFactor
+                ,rooms* marketFactor,sheetTrock* marketFactor,exteriorTrim * marketFactor,brickWork * marketFactor,landscaping*marketFactor,windows*marketFactor };
         }
     }
 }
