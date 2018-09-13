@@ -56,6 +56,8 @@ namespace RightPath
                         new AnswerChoice("One to two rooms"), // Add 1
                         new AnswerChoice("Half of the house or less"), // Add 1.5
                         new AnswerChoice("Most of the house"), // Add 2
+                        new AnswerChoice("Flood house"), // Add 2.5
+
                         new AnswerChoice("No damage"),
                         new AnswerChoice("I don't know") // No change
                     }),

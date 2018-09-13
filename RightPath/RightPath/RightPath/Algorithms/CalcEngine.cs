@@ -59,6 +59,12 @@ namespace RightPath.Algorithms
                 BasicRate += 2;
             }
 
+            else if (questions.Q(43).Choices[3].IsSelected)
+            {
+                BasicRate += 2.5;
+            }
+
+
             // 44 - broken items
             if (!questions.Q(44).Choices[4].IsSelected && !questions.Q(44).Choices[5].IsSelected)
             {
@@ -967,48 +973,49 @@ namespace RightPath.Algorithms
             }
 
             // 302
-            var windows = 0d;
+            var trash = 0d;
             if (questions.Q(302).Choices[0].IsSelected)
             {
-                windows = 400;
+                trash = 400;
             }
             else if (questions.Q(302).Choices[1].IsSelected)
             {
-                windows = 600;
+                trash = 600;
             }
             else if (questions.Q(302).Choices[2].IsSelected)
             {
-                windows = 1200;
+                trash = 1200;
             }
             else if (questions.Q(302).Choices[3].IsSelected)
             {
-                windows = 2500;
+                trash = 2500;
             }
-
-            if (!questions.Q(1001).Choices[2].IsSelected)
-            {
-                moves += questions.Q(1001).Choices[0].Value * 450d;
-                moves += questions.Q(1001).Choices[1].Value * 200d;
-            }
-
 
             var landscaping = 0.0;
 
+            if (!questions.Q(1001).Choices[2].IsSelected)
+            {
+                landscaping += questions.Q(1001).Choices[0].Value * 450d;
+                landscaping += questions.Q(1001).Choices[1].Value * 200d;
+            }
+
+
+            var windows = 0d;
             if (questions.Q(1002).Choices[0].IsSelected)
             {
-                landscaping += 200d;
+                windows += 200d;
             }
             else if (questions.Q(1002).Choices[1].IsSelected)
             {
-                landscaping += 800d;
+                windows += 800d;
             }
             else if (questions.Q(1002).Choices[2].IsSelected)
             {
-                landscaping += 2000d;
+                windows += 2000d;
             }
             else if (questions.Q(1002).Choices[3].IsSelected)
             {
-                landscaping += 4000d;
+                windows += 4000d;
             }
 
             var basicResult = BasicRate * SquareFeet + countertops + cabinets + surrounds + appliances;
