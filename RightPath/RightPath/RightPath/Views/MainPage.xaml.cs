@@ -47,19 +47,19 @@ namespace RightPath.Views
                 newIndex += Questions[newIndex - 1].Choices.First(ans => ans.IsSelected).Skip;
             }
 
-            if (newIndex > 0)
-            {
-                var currentQuestion = Questions[currentIndex];
-                if (currentQuestion.Id == 34)
-                {
-                    if ((currentQuestion.Choices[1].IsSelected) ||
-                    (currentQuestion.Choices[2].IsSelected) ||
-                      (currentQuestion.Choices[3].IsSelected))
-                    {
-                        newIndex++;
-                    }
-                }
-            }
+            //if (newIndex > 0)
+            //{
+            //    var currentQuestion = Questions[currentIndex];
+            //    if (currentQuestion.Id == 34)
+            //    {
+            //        if ((currentQuestion.Choices[1].IsSelected) ||
+            //        (currentQuestion.Choices[2].IsSelected) ||
+            //          (currentQuestion.Choices[3].IsSelected))
+            //        {
+            //            newIndex++;
+            //        }
+            //    }
+            //}
 
 
             if (newIndex < Questions.QList.Count)
