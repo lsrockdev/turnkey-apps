@@ -21,7 +21,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.turnkeyestimates.turnkey</string>
 	<key>CFBundleVersion</key>
-	<string>7.0</string>
+	<string>8.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch</string>
 	<key>CFBundleShortVersionString</key>
