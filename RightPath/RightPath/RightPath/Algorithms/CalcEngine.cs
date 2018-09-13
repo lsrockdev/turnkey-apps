@@ -285,6 +285,12 @@ namespace RightPath.Algorithms
                     BasicRate += 0.125;
                     fixtureUpgradesRate += 1/3d*(1/4d)*fixturePremium;
                 }
+                if (questions.Q(11).Choices[4].IsSelected)
+                {
+                    BasicRate += 0.125;
+                    fixtureUpgradesRate += 1 / 3d * (1 / 4d) * fixturePremium;
+                }
+
             }
 
             // 12 - outlets

@@ -141,6 +141,8 @@ namespace RightPath
                         // Add 0.125 + (1/3)*(1/4)*fixturePremium
                         new AnswerChoice("Utility room/ wet bar faucets", AnswerChoiceType.MultipleSelection),
                         // Add 0.125 + (1/3)*(1/4)*fixturePremium
+                        new AnswerChoice("Water heater", AnswerChoiceType.MultipleSelection),
+
                         new AnswerChoice("No, I'm keeping it as it is")
                     }),
                 new Question(12, "Are you planning on replacing all of the existing outlets and switches?",
@@ -529,14 +531,6 @@ namespace RightPath
                         new AnswerChoice("I don't know")
                     }),
 
-                new Question(1001, "Are you planning on having any landscaping work done (i.e. maintenance, clearing, tree trimming)?", EstimateCategory.None,
-                    new List<AnswerChoice>
-                    {
-                        new AnswerChoice("Replacing",AnswerChoiceType.NumberSelection),
-                        new AnswerChoice("Repairing (i.e. glass)",AnswerChoiceType.NumberSelection),
-                        new AnswerChoice("No, I’m keeping it as is",AnswerChoiceType.SingleSelection),
-                    }),
-
 
                 new Question(1002, "Are you having to repair or replace any windows and how many?", EstimateCategory.None,
                     new List<AnswerChoice>
@@ -547,7 +541,18 @@ namespace RightPath
                         new AnswerChoice("1-2 acres (maintenance and minor manicuring on 1-2 acres)"),
                         new AnswerChoice("No, I’m keeping it as is"),
                         new AnswerChoice("I don’t know")
+                    }),
+
+
+                new Question(1001, "Are you planning on having any landscaping work done (i.e. maintenance, clearing, tree trimming)?", EstimateCategory.None,
+                    new List<AnswerChoice>
+                    {
+                        new AnswerChoice("Replacing",AnswerChoiceType.NumberSelection),
+                        new AnswerChoice("Repairing (i.e. glass)",AnswerChoiceType.NumberSelection),
+                        new AnswerChoice("No, I’m keeping it as is",AnswerChoiceType.SingleSelection),
                     })
+
+
 
             };
 
