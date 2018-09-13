@@ -517,9 +517,9 @@ namespace RightPath
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("25% or less"), // Add 2.5
-                        new AnswerChoice("50%"), // Add 5
-                        new AnswerChoice("75%"), // Add 7.5
-                        new AnswerChoice("100%"), // Add 10
+                        new AnswerChoice("25%-50%"), // Add 5
+                        new AnswerChoice("50%-75%"), // Add 7.5
+                        new AnswerChoice("75%-100%"), // Add 10
                         new AnswerChoice("I don't know") // Add 5
                     }),
                 new Question(302, "How much trash was left by the previous owner?", EstimateCategory.None,
