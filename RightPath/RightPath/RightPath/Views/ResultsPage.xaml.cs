@@ -32,7 +32,8 @@ namespace RightPath.Views
 
         private void Button_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PopToRootAsync();
+            //Navigation.PopToRootAsync();
+            Navigation.PushAsync(new MainPage("Start"));
         }
 
         private void DetailButton_OnClicked(object sender, EventArgs e)
@@ -66,6 +67,7 @@ namespace RightPath.Views
             sb.AppendLine($"Brick Work: {_results[14]:C0}");
             sb.AppendLine($"Landscaping: {_results[15]:C0}");
             sb.AppendLine($"Windows: {_results[16]:C0}");
+            sb.AppendLine($"Extra trash: {_results[17]:C0}");
 
             DisplayAlert("Additional Details", sb.ToString(), "Close");
         }

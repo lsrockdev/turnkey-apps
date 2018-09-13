@@ -154,48 +154,70 @@ namespace RightPath.Algorithms
 
             #endregion premiums setup
 
-            // 7 - wet area floor
-            if (questions.Q(7).Choices[0].IsSelected)
-            {
-                BasicRate += 0.5;
-                upgradesRate += 1/8d*flooringPremium;
+            //// 7 - wet area floor
+            //if (questions.Q(7).Choices[0].IsSelected)
+            //{
+            //    BasicRate += 0.5;
+            //    upgradesRate += 1/8d*flooringPremium;
 
-                //flooringUpgrades += (0.5 + 1 / 8d * flooringPremium) * SquareFeet;
-            }
+            //    //flooringUpgrades += (0.5 + 1 / 8d * flooringPremium) * SquareFeet;
+            //}
 
             // 201
-            if (questions.Q(201).Choices[0].IsSelected)
-            {
-                BasicRate += 0.2;
-                upgradesRate += 1/16d*flooringPremium;
+            //if (questions.Q(201).Choices[0].IsSelected)
+            //{
+            //    BasicRate += 0.2;
+            //    upgradesRate += 1/16d*flooringPremium;
 
-                //flooringUpgrades += (0.2 + 1 / 16d * flooringPremium) * SquareFeet;
+            //    //flooringUpgrades += (0.2 + 1 / 16d * flooringPremium) * SquareFeet;
  
-            }
-            else if (questions.Q(201).Choices[2].IsSelected)
-            {
-                BasicRate += 0.2;
-                upgradesRate += 1 / 16d * flooringPremium;
+            //}
+            //else if (questions.Q(201).Choices[2].IsSelected)
+            //{
+            //    BasicRate += 0.2;
+            //    upgradesRate += 1 / 16d * flooringPremium;
 
-                //flooringUpgrades += (0.2 + 1 / 16d * flooringPremium) * SquareFeet;
-                //var BathroomFloorReplacementCount = questions.Q(300).NumericalValue;
-                //BasicRate += 0.2/BathroomFloorReplacementCount;
-                //upgradesRate += 1/16d*flooringPremium/BathroomFloorReplacementCount;
-            }
+            //    //flooringUpgrades += (0.2 + 1 / 16d * flooringPremium) * SquareFeet;
+            //    //var BathroomFloorReplacementCount = questions.Q(300).NumericalValue;
+            //    //BasicRate += 0.2/BathroomFloorReplacementCount;
+            //    //upgradesRate += 1/16d*flooringPremium/BathroomFloorReplacementCount;
+            //}
 
-            // 202
-            if (questions.Q(202).Choices[0].IsSelected)
-            {
-                BasicRate += 0.05;
-                upgradesRate += 1/48d*flooringPremium;
+            //// 202
+            //if (questions.Q(202).Choices[0].IsSelected)
+            //{
+            //    BasicRate += 0.05;
+            //    upgradesRate += 1/48d*flooringPremium;
 
-                //flooringUpgrades += (0.05 + 1 / 48d * flooringPremium) * SquareFeet;
-            }
+            //    //flooringUpgrades += (0.05 + 1 / 48d * flooringPremium) * SquareFeet;
+            //}
 
             // 8 - living area floor
-            if (!questions.Q(8).Choices[3].IsSelected)
+            if (!questions.Q(8).Choices[8].IsSelected)
             {
+
                 if (questions.Q(8).Choices[0].IsSelected)
+                {
+                    BasicRate += 0.5;
+                    upgradesRate += 1 / 8d * flooringPremium;
+
+                }
+
+                if (questions.Q(8).Choices[1].IsSelected)
+                {
+                    BasicRate += 0.2;
+                    upgradesRate += 1 / 16d * flooringPremium;
+
+                }
+
+                if (questions.Q(8).Choices[2].IsSelected)
+                {
+                    BasicRate += 0.05;
+                    upgradesRate += 1 / 48d * flooringPremium;
+                }
+
+
+                if (questions.Q(8).Choices[3].IsSelected)
                 {
                     var mlPremium = flooringPremium;
 
@@ -206,39 +228,27 @@ namespace RightPath.Algorithms
 
                     BasicRate += 0.65;
                     upgradesRate += 7/16d*mlPremium;
-
-                    //flooringUpgrades += (0.65 + 7 / 16d * flooringPremium) * SquareFeet;
                 }
 
-                if (questions.Q(8).Choices[1].IsSelected)
+                if (questions.Q(8).Choices[4].IsSelected)
                 {
                     BasicRate += 0.125;
                     upgradesRate += 1/8d*flooringPremium;
-
-                    //flooringUpgrades += (0.125 + 1 / 8d * flooringPremium) * SquareFeet;
                 }
 
-                if (questions.Q(8).Choices[2].IsSelected)
+                if (questions.Q(8).Choices[5].IsSelected)
                 {
                     BasicRate += 0.125;
                     upgradesRate += 1/8d*flooringPremium;
-
-                    //flooringUpgrades += (0.125 + 1 / 8d * flooringPremium) * SquareFeet;
                 }
-            }
 
-            // 9 - bedroom floor
-            if (!questions.Q(9).Choices[2].IsSelected)
-            {
-                if (questions.Q(9).Choices[0].IsSelected)
+                if (questions.Q(8).Choices[6].IsSelected)
                 {
                     BasicRate += 0.15;
-                    upgradesRate += 1/8d*flooringPremium;
-
-                    //flooringUpgrades += (0.15 + 1 / 8d * flooringPremium) * SquareFeet;
+                    upgradesRate += 1 / 8d * flooringPremium;
                 }
 
-                if (questions.Q(9).Choices[1].IsSelected)
+                if (questions.Q(8).Choices[7].IsSelected)
                 {
                     var mlPremium = flooringPremium;
 
@@ -248,11 +258,36 @@ namespace RightPath.Algorithms
                     }
 
                     BasicRate += 0.25;
-                    upgradesRate += 1/16d*mlPremium;
-
-                    //flooringUpgrades += (0.25 + 1 / 16d * flooringPremium) * SquareFeet;
+                    upgradesRate += 1 / 16d * mlPremium;
                 }
             }
+
+            //// 9 - bedroom floor
+            //if (!questions.Q(9).Choices[2].IsSelected)
+            //{
+            //    if (questions.Q(9).Choices[0].IsSelected)
+            //    {
+            //        BasicRate += 0.15;
+            //        upgradesRate += 1/8d*flooringPremium;
+
+            //        //flooringUpgrades += (0.15 + 1 / 8d * flooringPremium) * SquareFeet;
+            //    }
+
+            //    if (questions.Q(9).Choices[1].IsSelected)
+            //    {
+            //        var mlPremium = flooringPremium;
+
+            //        if (questions.Q(210).Choices[0].IsSelected)
+            //        {
+            //            mlPremium /= 2;
+            //        }
+
+            //        BasicRate += 0.25;
+            //        upgradesRate += 1/16d*mlPremium;
+
+            //        //flooringUpgrades += (0.25 + 1 / 16d * flooringPremium) * SquareFeet;
+            //    }
+            //}
 
             // 102
             var numBathrooms = questions.Q(102).NumericalValue;
@@ -753,6 +788,7 @@ namespace RightPath.Algorithms
                 moves += questions.Q(33).Choices[1].Value * 450d;
                 moves += questions.Q(33).Choices[2].Value * 800d;
                 moves += questions.Q(33).Choices[3].Value * 1000d;
+                moves += questions.Q(33).Choices[4].Value * 1100d;
 
                 //if (questions.Q(33).Choices[0].IsSelected)
                 //{
@@ -1020,7 +1056,7 @@ namespace RightPath.Algorithms
 
             var basicResult = BasicRate * SquareFeet + countertops + cabinets + surrounds + appliances;
             //var raritiesResult = raritiesRate*SquareFeet + rooms + brickRepair + moves + trash;
-            var raritiesResult = rooms + sheetTrock + exteriorTrim + brickWork + landscaping + windows;
+            var raritiesResult = rooms + sheetTrock + exteriorTrim + brickWork + landscaping + windows + trash;
 
             //var raritiesResult = moves/marketFactor;
 
@@ -1029,7 +1065,7 @@ namespace RightPath.Algorithms
             var appearanceUpgrades = fixtureUpgradesRate * SquareFeet + countertopsUpgrade + appliancesUpgrade;
             return new[] { basicResult * marketFactor, upgradesResult * marketFactor, roof * marketFactor, foundation * marketFactor, hvacPremium * marketFactor, electricalPremium * marketFactor, pipes * marketFactor
                 , raritiesResult * marketFactor,flooringUpgrades*marketFactor,cabinetsUpgrade*marketFactor,appearanceUpgrades*marketFactor
-                ,rooms* marketFactor,sheetTrock* marketFactor,exteriorTrim * marketFactor,brickWork * marketFactor,landscaping*marketFactor,windows*marketFactor };
+                ,rooms* marketFactor,sheetTrock* marketFactor,exteriorTrim * marketFactor,brickWork * marketFactor,landscaping*marketFactor,windows*marketFactor,trash*marketFactor };
         }
     }
 }

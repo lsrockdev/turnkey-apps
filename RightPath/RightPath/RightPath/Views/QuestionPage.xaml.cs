@@ -75,7 +75,7 @@ namespace RightPath.Views
 
                     var plusButton = new Button
                     {
-                        HorizontalOptions = LayoutOptions.Start,
+                        HorizontalOptions = LayoutOptions.End,
                         VerticalOptions = LayoutOptions.Center,
                         //Margin = new Thickness(0, 0, 100, 0),
                         Text = "+",
@@ -97,7 +97,7 @@ namespace RightPath.Views
 
                     var minusButton = new Button
                     {
-                        HorizontalOptions = LayoutOptions.End,
+                        HorizontalOptions = LayoutOptions.Start,
                         VerticalOptions = LayoutOptions.Center,
                         Text = "-",
                         FontSize = 25,

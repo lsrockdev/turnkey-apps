@@ -73,53 +73,59 @@ namespace RightPath
                         new AnswerChoice("None of the above"),
                         new AnswerChoice("I don't know")
                     }),
-                new Question(7, "Are you planning on replacing or refinishing the kitchen flooring?", EstimateCategory.Basic,
-                    new List<AnswerChoice>
-                    {
-                        new AnswerChoice("Yes"), // Add 0.5 + 1/8*flooringPremium // Flip grade
-                        new AnswerChoice("No"),
-                        new AnswerChoice("I don't know")
-                    }),
-                new Question(201, "Are you planning on replacing or refinishing the bathroom flooring?", EstimateCategory.Basic,
-                    new List<AnswerChoice>
-                    {
-                        new AnswerChoice("Yes"),
-                        new AnswerChoice("No"),
-                        new AnswerChoice("Some"),
-                        new AnswerChoice("I don't know")
-                    }),
-                //new Question(300, "If some, in how many bathrooms will the flooring be replaced?",
-                    //EstimateCategory.Basic, null, true),
+                //new Question(7, "Are you planning on replacing or refinishing the kitchen flooring?", EstimateCategory.Basic,
+                //    new List<AnswerChoice>
+                //    {
+                //        new AnswerChoice("Yes"), // Add 0.5 + 1/8*flooringPremium // Flip grade
+                //        new AnswerChoice("No"),
+                //        new AnswerChoice("I don't know")
+                //    }),
+                //new Question(201, "Are you planning on replacing or refinishing the bathroom flooring?", EstimateCategory.Basic,
+                //    new List<AnswerChoice>
+                //    {
+                //        new AnswerChoice("Yes"),
+                //        new AnswerChoice("No"),
+                //        new AnswerChoice("Some"),
+                //        new AnswerChoice("I don't know")
+                //    }),
+                ////new Question(300, "If some, in how many bathrooms will the flooring be replaced?",
+                //    //EstimateCategory.Basic, null, true),
                 
-                new Question(202, "Are you planning on replacing or refinishing the utility room flooring?", EstimateCategory.Basic,
-                    new List<AnswerChoice>
-                    {
-                        new AnswerChoice("Yes"),
-                        new AnswerChoice("No"),
-                        new AnswerChoice("I don't know")
-                    }),
-                new Question(8, "Are you planning on replacing or refinishing any of the living area flooring (select all that apply)?",
+                //new Question(202, "Are you planning on replacing or refinishing the utility room flooring?", EstimateCategory.Basic,
+                    //new List<AnswerChoice>
+                    //{
+                        //new AnswerChoice("Yes"),
+                        //new AnswerChoice("No"),
+                        //new AnswerChoice("I don't know")
+                    //}),
+                new Question(8, "Are you planning on replacing or refinishing any flooring (select all that apply)?",
                     EstimateCategory.Basic,
                     new List<AnswerChoice>
                     {
+                        new AnswerChoice("Kitchen", AnswerChoiceType.MultipleSelection),
+                        new AnswerChoice("Bathroom", AnswerChoiceType.MultipleSelection),
+                        new AnswerChoice("Utility room", AnswerChoiceType.MultipleSelection),
+
                         new AnswerChoice("Main living areas", AnswerChoiceType.MultipleSelection),
                         // Add 0.75 + 7/16*flooringPremium
                         new AnswerChoice("Hallways", AnswerChoiceType.MultipleSelection),
                         // Add 0.125 + 1/8*flooringPremium
                         new AnswerChoice("Stairs", AnswerChoiceType.MultipleSelection),
                         // Add 0.125 + 1/8*flooringPremium
-                        new AnswerChoice("No, I'm keeping it as it is")
-                    }),
-                new Question(9, "Are you planning on replacing or refinishing any of the bedroom flooring (select all that apply)?",
-                    EstimateCategory.Basic,
-                    new List<AnswerChoice>
-                    {
                         new AnswerChoice("Master bedroom", AnswerChoiceType.MultipleSelection),
-                        // Add 0.125 + 1/8*flooringPremium
                         new AnswerChoice("Other bedrooms", AnswerChoiceType.MultipleSelection),
-                        // Add 0.25 + 1/16*flooringPremium
                         new AnswerChoice("No, I'm keeping it as it is")
                     }),
+                //new Question(9, "Are you planning on replacing or refinishing any of the bedroom flooring (select all that apply)?",
+                    //EstimateCategory.Basic,
+                    //new List<AnswerChoice>
+                    //{
+                    //    new AnswerChoice("Master bedroom", AnswerChoiceType.MultipleSelection),
+                    //    // Add 0.125 + 1/8*flooringPremium
+                    //    new AnswerChoice("Other bedrooms", AnswerChoiceType.MultipleSelection),
+                    //    // Add 0.25 + 1/16*flooringPremium
+                    //    new AnswerChoice("No, I'm keeping it as it is")
+                    //}),
                 new Question(102, "How many bathrooms does the house have?", EstimateCategory.None, null, true),
                 new Question(10, "Are you planning on replacing any of the bath tubs, showers, or surrounds?",
                     EstimateCategory.Basic,
@@ -419,6 +425,8 @@ namespace RightPath
                         new AnswerChoice("Sinks", AnswerChoiceType.NumberSelection), // $450A 
                         new AnswerChoice("Shower supply lines", AnswerChoiceType.NumberSelection), // $800
                         new AnswerChoice("Shower/ tub drain location", AnswerChoiceType.NumberSelection),
+                        new AnswerChoice("Gas line", AnswerChoiceType.NumberSelection),
+
                             // $1000 - all should be each
                         new AnswerChoice("No, I'm keeping it as it is",AnswerChoiceType.SingleSelection)
                     }),
@@ -533,29 +541,25 @@ namespace RightPath
                         new AnswerChoice("I don't know")
                     }),
 
-
-                new Question(1002, "Are you having to repair or replace any windows and how many?", EstimateCategory.None,
-                    new List<AnswerChoice>
-                    {
-                        new AnswerChoice("Small amount (basic maintenance of overgrown yard)"),
-                        new AnswerChoice("Medium amount (maintenance and minor manicuring)"),
-                        new AnswerChoice("Large amount (more significant manicuring)"),
-                        new AnswerChoice("1-2 acres (maintenance and minor manicuring on 1-2 acres)"),
-                        new AnswerChoice("No, I’m keeping it as is"),
-                        new AnswerChoice("I don’t know")
-                    }),
-
-
-                new Question(1001, "Are you planning on having any landscaping work done (i.e. maintenance, clearing, tree trimming)?", EstimateCategory.None,
+                new Question(1001, "Are you having to repair or replace any windows and how many?", EstimateCategory.None,
                     new List<AnswerChoice>
                     {
                         new AnswerChoice("Replacing",AnswerChoiceType.NumberSelection),
                         new AnswerChoice("Repairing (i.e. glass)",AnswerChoiceType.NumberSelection),
                         new AnswerChoice("No, I’m keeping it as is",AnswerChoiceType.SingleSelection),
+                    }),
+
+
+                new Question(1002, "Are you planning on having any landscaping work done (i.e. maintenance, clearing, tree trimming)?", EstimateCategory.None,
+                    new List<AnswerChoice>
+                    {
+                        new AnswerChoice("Small amount (basic maintenance)"),
+                        new AnswerChoice("Medium amount (minor manicuring)"),
+                        new AnswerChoice("Large amount (significant manicuring)"),
+                        new AnswerChoice("1-2 acres (maintenance and manicuring)"),
+                        new AnswerChoice("No, I’m keeping it as is"),
+                        new AnswerChoice("I don’t know")
                     })
-
-
-
             };
 
             foreach (var question in QList)
