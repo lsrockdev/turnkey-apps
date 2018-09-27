@@ -23,5 +23,9 @@ namespace RightPath.Data
             return restService.UserSignupAsync(user);
         }
 
+        public Task<bool> MakePurchaseAsync()
+        {
+            return restService.MakePurchase();
+        }
     }
 }

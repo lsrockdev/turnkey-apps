@@ -33,6 +33,7 @@ namespace RightPath.Views
                 question.Reset();
             }
             GetNextQuestion(-1);
+            checkPurchase();
         }
 
         private void GetNextQuestion(int currentIndex)
@@ -73,5 +74,29 @@ namespace RightPath.Views
                 Navigation.PushAsync(new ResultsPage(Questions));
             }
         }
+
+
+        async void checkPurchase()
+        {
+            bool purchaseResponse = await App.userManager.MakePurchaseAsync();
+            if (purchaseResponse)
+            {
+                var answer = await DisplayAlert("Question?", "Would you like to play a game", "Yes", "No");
+
+            }
+            else
+            {
+                var answer = await DisplayAlert("Question?", "Would you like to play a game", "Yes", "No");
+                if (answer)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
     }
 }

@@ -8,5 +8,6 @@ namespace RightPath.Data
 	{
         Task<LoginResponse> UserLoginAsync (User user);
         Task<LoginResponse> UserSignupAsync(User user);
-	}
+        Task<bool> MakePurchase();
+    }
 }

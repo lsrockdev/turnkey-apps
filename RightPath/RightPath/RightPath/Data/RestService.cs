@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using RightPath.Models;
 using RightPath.Models.ResponseModel;
 using RightPath.Data;
+using Plugin.InAppBilling;
 
 namespace RightPath.Data
 {
@@ -77,5 +78,26 @@ namespace RightPath.Data
             }
 
 		}
-	}
+
+
+        public async Task<bool> MakePurchase()
+        {
+            var billing = CrossInAppBilling.Current;
+            try
+            {
+                var connected = await billing.ConnectAsync(Plugin.InAppBilling.Abstractions.ItemType.InAppPurchase);
+                if (!connected)
+                    return false;
+                else
+                    return true;
+
+                //make additional billing calls
+            }
+            finally
+            {
+                await billing.DisconnectAsync();
+            }
+        }
+
+    }
 }

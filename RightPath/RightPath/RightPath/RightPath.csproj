@@ -143,6 +143,12 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.InAppBilling.Abstractions">
+      <HintPath>..\..\packages\Plugin.InAppBilling.2.0.0\lib\netstandard1.0\Plugin.InAppBilling.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.InAppBilling">
+      <HintPath>..\..\packages\Plugin.InAppBilling.2.0.0\lib\netstandard1.0\Plugin.InAppBilling.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
